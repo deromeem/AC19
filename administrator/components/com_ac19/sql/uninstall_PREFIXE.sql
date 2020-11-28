@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS `ac19_ac19_ligne_cdes`;
+DROP TABLE IF EXISTS `ac19_ac19_stocks`;
+DROP TABLE IF EXISTS `ac19_ac19_produits`;
+DROP TABLE IF EXISTS `ac19_ac19_catal_categs`;
+DROP TABLE IF EXISTS `ac19_ac19_categories`;
+DROP TABLE IF EXISTS `ac19_ac19_catalogues`;
+DROP TABLE IF EXISTS `ac19_ac19_prise_en_charges`;
+DROP TABLE IF EXISTS `ac19_ac19_commandes`;
+DROP TABLE IF EXISTS `ac19_ac19_etat_cdes`;
+DROP TABLE IF EXISTS `ac19_ac19_magasins`;
+DROP TABLE IF EXISTS `ac19_ac19_type_mags`;
+DROP TABLE IF EXISTS `ac19_ac19_particuliers`;
+DROP TABLE IF EXISTS `ac19_ac19_benevoles`;
+DROP TABLE IF EXISTS `ac19_ac19_coordinateurs`;
+DROP TABLE IF EXISTS `ac19_ac19_partenaires`;
+DROP TABLE IF EXISTS `ac19_ac19_messages`;
+DROP TABLE IF EXISTS `ac19_ac19_utilisateurs`;

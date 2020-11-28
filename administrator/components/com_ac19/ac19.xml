@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+ 	<name>com_ac19</name>
+	<creationDate>Novembre 2020</creationDate>
+	<author>BTS2-SIO SLAM</author>
+	<copyright>All rights reserved</copyright>
+	<license>GNU/GPL</license>
+	<version>0.3</version>
+	<description>com_ac19_descr</description>
+
+	<install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>ac19.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_ac19.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_ac19.ini</language>
+	</languages>
+
+	<administration>
+		<menu>com_ac19</menu>
+		<submenu>
+			<menu link="option=com_ac19&amp;view=benevoles">com_ac19_benevoles</menu>
+			<menu link="option=com_ac19&amp;view=catalogues">com_ac19_catalogues</menu>
+			<menu link="option=com_ac19&amp;view=catal_categs">com_ac19_catal_categs</menu>
+			<menu link="option=com_ac19&amp;view=categories">com_ac19_categories</menu>
+			<menu link="option=com_ac19&amp;view=commandes">com_ac19_commandes</menu>
+			<menu link="option=com_ac19&amp;view=coordinateurs">com_ac19_coordinateurs</menu>
+			<menu link="option=com_ac19&amp;view=etat_cdes">com_ac19_etat_cdes</menu>
+			<menu link="option=com_ac19&amp;view=ligne_cdes">com_ac19_ligne_cdes</menu>
+			<menu link="option=com_ac19&amp;view=magasins">com_ac19_magasins</menu>
+			<menu link="option=com_ac19&amp;view=messages">com_ac19_messages</menu>
+			<menu link="option=com_ac19&amp;view=partenaires">com_ac19_partenaires</menu>
+			<menu link="option=com_ac19&amp;view=particuliers">com_ac19_particuliers</menu>
+			<menu link="option=com_ac19&amp;view=prise_en_charges">com_ac19_prise_en_charges</menu>
+			<menu link="option=com_ac19&amp;view=produits">com_ac19_produits</menu>
+			<menu link="option=com_ac19&amp;view=stocks">com_ac19_stocks</menu>
+			<menu link="option=com_ac19&amp;view=type_mags">com_ac19_type_mags</menu>
+			<menu link="option=com_ac19&amp;view=utilisateurs">com_ac19_utilisateurs</menu>
+		</submenu>
+		<files folder="admin">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>ac19.php</filename>
+			<filename>ac19.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+		</files>                
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_ac19.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_ac19.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_ac19.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_ac19.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
