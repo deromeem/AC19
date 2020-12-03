@@ -16,10 +16,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_MESSAGES_CONTENU', 'm.contenu', $listDirn, $listOrder) ?>
         </th>
         <th width="10%" class="nowrap center">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MESSAGES_AUTEUR', 'm.messages_auth_id', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_MESSAGES_AUTEUR', 'auteur', $listDirn, $listOrder) ?>
 		</th>
 		<th width="10%" class="nowrap center">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MESSAGES_DESTINATAIRE', 'm.messages_dest_id', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_MESSAGES_DESTINATAIRE', 'destinataire', $listDirn, $listOrder) ?>
 		</th>
 		<th width="5%" style="min-width:55px" class="nowrap center hidden-phone">
 			<?php echo JHtml::_('grid.sort', 'Publié', 'm.published', $listDirn, $listOrder) ?>

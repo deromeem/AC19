@@ -13,8 +13,8 @@ class Ac19ModelMessages extends JModelList
 				'date', 'm.date',
 				'objet', 'm.objet',
 				'contenu', 'm.contenu',
-				'auteur', 'm.auteur',
-				'destinataire', 'm.destinataire',
+				'auteur', 'auteur',
+				'destinataire', 'destinataire',
 				'published', 'm.published',
 				'hits', 'm.hits',
 				'modified', 'm.modified'

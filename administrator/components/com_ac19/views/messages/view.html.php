@@ -76,8 +76,8 @@ class Ac19ViewMessages extends JViewLegacy
 			'm.date' => JText::_('COM_AC19_MESSAGES_DATE'),
 			'm.objet' => JText::_('COM_AC19_MESSAGES_OBJET'),
 			'm.contenu' => JText::_('COM_AC19_MESSAGES_CONTENU'),
-			'm.utilisateurs_aut_id' => JText::_('COM_AC19_MESSAGES_AUTEUR'),
-			'm.utilisateurs_dest_id' => JText::_('COM_AC19_MESSAGES_DESTINATAIRE'),
+			'auteur' => JText::_('COM_AC19_MESSAGES_AUTEUR'),
+			'destinataire' => JText::_('COM_AC19_MESSAGES_DESTINATAIRE'),
 			'm.id' => "Id"
 		);
 	}  
