@@ -7,7 +7,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 $saveOrder	= $listOrder == 'ordering';
 if ($saveOrder)
 {
-	$saveOrderingUrl = 'index.php?option=com_annuaire&task=entreprises.saveOrderAjax&tmpl=component';
+	$saveOrderingUrl = 'index.php?option=com_ac19&task=benevoles.saveOrderAjax&tmpl=component';
 	JHtml::_('sortablelist.sortable', 'articleList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
 }
 ?>
@@ -31,7 +31,7 @@ if ($saveOrder)
 			<?php echo $item->longitude; ?>
 		</td>
 		<td class="center hidden-phone">
-			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'entreprises.', true); ?>
+			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'benevoles.', true); ?>
 		</td>
 		<td class="center hidden-tablet hidden-phone">
 			<?php echo JHtml::_('date', $item->modified, $this->paramDateFmt); ?>
