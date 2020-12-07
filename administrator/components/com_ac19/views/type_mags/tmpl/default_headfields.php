@@ -27,7 +27,7 @@ $sortFields = $this->getSortFields();
 	<div id="filter-bar" class="btn-toolbar">
 		<div class="filter-search btn-group pull-left">
 			<input type="text" name="filter_search" id="filter_search" placeholder="<?php echo JText::_('JSEARCH_FILTER');?>" 
-			value="<?php echo $this->escape($this->state->get('filter.search')); ?>" class="hasTooltip"  title="<?php echo JText::_('COM_ANNUAIRE_CONTACTS_SEARCH_TEXT_TIP');?>" />
+			value="<?php echo $this->escape($this->state->get('filter.search')); ?>" class="hasTooltip"  title="<?php echo JText::_('COM_FOLIA_TYPE_MAGS_SEARCH_TEXT_TIP');?>" />
 		</div>
 		
 		<div class="btn-group pull-left">

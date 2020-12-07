@@ -73,13 +73,13 @@ class Ac19ViewMagasins extends JViewLegacy
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'm.nom' => JText::_('COM_AC19_MAGASINS_ENSEIGNE'),
-			'm.prenom' => JText::_('COM_AC19_MAGASINS_ADR_RUE'),
-			'm.email' => JText::_('COM_AC19_MAGASINS_ADR_VILLE'),
-			'm.tel' => JText::_('COM_AC19_MAGASINS_ADR_CP'),
-			'm.nom' => JText::_('COM_AC19_MAGASINS_TEL'),
-			'm.prenom' => JText::_('COM_AC19_MAGASINS_LATITUDE'),
-			'm.email' => JText::_('COM_AC19_MAGASINS_LONGITUDE'),
+			'm.enseigne' => JText::_('COM_AC19_MAGASINS_ENSEIGNE'),
+			'm.adrRue' => JText::_('COM_AC19_MAGASINS_ADR_RUE'),
+			'm.adrRue' => JText::_('COM_AC19_MAGASINS_ADR_VILLE'),
+			'm.adrCP' => JText::_('COM_AC19_MAGASINS_ADR_CP'),
+			'm.tel' => JText::_('COM_AC19_MAGASINS_TEL'),
+			'm.latitude' => JText::_('COM_AC19_MAGASINS_LATITUDE'),
+			'm.longitude' => JText::_('COM_AC19_MAGASINS_LONGITUDE'),
 		);
 	}  
 	
