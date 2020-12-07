@@ -22,11 +22,7 @@ JHtml::_('formbehavior.chosen', 'select');
 		<div class="control-group">
 			<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
 			<div class="controls"><?php echo $this->form->getInput('titre'); ?></div>
-		</div>						
-		<div class="control-group">
-			<div class="control-label"><?php echo $this->form->getLabel('alias'); ?></div>
-			<div class="controls"><?php echo $this->form->getInput('alias'); ?></div>
-		</div>					
+		</div>										
 	</div>					
 
 	<div class="form-horizontal">
@@ -46,10 +42,26 @@ JHtml::_('formbehavior.chosen', 'select');
 					</div>					
 					<div class="control-group">
 						<div class="span2">
-							<div class="control-label"><?php echo $this->form->getLabel('tel'); ?></div>
+							<div class="control-label"><?php echo $this->form->getLabel('dateDebut'); ?></div>
 						</div>					
 						<div class="span7">
-							<div class="controls"><?php echo $this->form->getInput('tel'); ?></div>
+							<div class="controls"><?php echo $this->form->getInput('dateDebut'); ?></div>
+						</div>					
+					</div>	
+					<div class="control-group">
+						<div class="span2">
+							<div class="control-label"><?php echo $this->form->getLabel('dateFin'); ?></div>
+						</div>					
+						<div class="span7">
+							<div class="controls"><?php echo $this->form->getInput('dateFin'); ?></div>
+						</div>					
+					</div>	
+					<div class="control-group">
+						<div class="span2">
+							<div class="control-label"><?php echo $this->form->getLabel('partenaires_id'); ?></div>
+						</div>					
+						<div class="span7">
+							<div class="controls"><?php echo $this->form->getInput('partenaires_id'); ?></div>
 						</div>					
 					</div>					
 				</div>
