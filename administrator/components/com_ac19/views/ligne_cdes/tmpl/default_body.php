@@ -33,9 +33,6 @@ if ($saveOrder)
 		<td>
 			<?php echo $item->produits_id; ?>
 		</td>
-		<td>
-			<?php echo $item->alias; ?>
-		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'ligne_cdes.', true); ?>
 		</td>

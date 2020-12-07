@@ -37,7 +37,7 @@ if ($saveOrder)
 			<?php echo $item->refPaiement; ?>
 		</td>
 		<td>
-			<?php echo $item->particuliers_id; ?>
+			<?php echo $item->particuliers; ?>
 		</td>
 		<td>
 			<?php echo $item->magasins_id; ?>
