@@ -5,39 +5,35 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="titre" type="text" label="COM_AC19_CATALOGUES_TITRE"
-            description="COM_AC19_CATALOGUES_TITRE"
+        <field name="date" type="calendar" label="COM_AC19_MESSAGES_DATE"
+            description="COM_AC19_MESSAGES_DATE"
             size="40" class="input-large-text" default="" required="true"
         />   
 
-		<field name="description" type="text" label="COM_AC19_CATALOGUES_DESCRIPTION"
-            description="COM_AC19_CATALOGUES_DESCRIPTION"
+		<field name="objet" type="text" label="COM_AC19_MESSAGES_OBJET"
+            description="COM_AC19_MESSAGES_OBJET"
             size="40" class="input-large-text" default="" required="true"
         />   
-
-		<field name="dateDebut" type="calendar" label="COM_AC19_CATALOGUES_DATE_DEBUT"
-            description="COM_AC19_CATALOGUES_DATE_DEBUT"
-            size="40" default="" required="true"
-        />
-
-		<field name="dateFin" type="calendar" label="COM_AC19_CATALOGUES_DATE_FIN"
-            description="COM_AC19_CATALOGUES_DATE_FIN"
-            size="40" default="" required="true" 
-        />
-
-		<field name="partenaires_id" type="sql" default="" label="COM_AC19_CATALOGUES_PARTENAIRE" 
-			description="COM_AC19_CATALOGUES_PARTENAIRE" 
-			query="SELECT id, raisonSociale FROM #__ac19_partenaires ORDER BY raisonSociale" 
-			key_field="id" value_field="raisonSociale" required="false"
-		/>
-
 		<field name="alias" type="text"
 			label="JFIELD_ALIAS_LABEL"
 			description="JFIELD_ALIAS_DESC"
 			hint="JFIELD_ALIAS_PLACEHOLDER"
 			class="inputbox" size="45"
 		/>
-      
+        <field name="contenu" type="text" label="COM_AC19_MESSAGES_CONTENU"
+            description="COM_AC19_MESSAGES_CONTENU"
+            size="40" class="input-xxlarge" default="" required="true"
+        />  
+        <field name="utilisateurs_aut_id" type="sql" label="COM_AC19_MESSAGES_AUTEUR"
+            description="COM_AC19_MESSAGES_AUTEUR"
+            query="SELECT id, nom FROM #__ac19_utilisateurs ORDER BY nom"
+            key_field="id" value_field="nom" required="false"
+        />
+        <field name="utilisateurs_dest_id" type="sql" label="COM_AC19_MESSAGES_DESTINATAIRE"
+            description="COM_AC19_MESSAGES_DESTINATAIRE"
+            query="SELECT id, nom FROM #__ac19_utilisateurs ORDER BY nom"
+            key_field="id" value_field="nom" required="false"
+        />  
         <field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"

@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class Ac19ViewStocks extends JViewLegacy
+class Ac19ViewCategories extends JViewLegacy
 {
 	function display($tpl = null) 
 	{
@@ -31,7 +31,7 @@ class Ac19ViewStocks extends JViewLegacy
 		// ajoute la toolbar contenant les boutons d'actions
 		$this->addToolBar();
 		// invoque la méthode addSubmenu du fichier de soutien (helper)
-		utilisateurHelper::addSubmenu('stocks');
+		utilisateurHelper::addSubmenu('categories');
 		// prépare et affiche la sidebar à gauche de la liste
 		$this->prepareSideBar();
 		$this->sidebar = JHtmlSidebar::render();
@@ -43,17 +43,17 @@ class Ac19ViewStocks extends JViewLegacy
 	protected function addToolBar() 
 	{
 		// affiche le titre de la page
-		JToolBarHelper::title(JText::_('COM_AC19_OPTIONS')." : ".JText::_('COM_AC19_STOCKS'));
+		JToolBarHelper::title(JText::_('COM_AC19_OPTIONS')." : ".JText::_('COM_AC19_CATEGORIES'));
 		
 		// affiche les boutons d'action
-		JToolBarHelper::addNew('stock.add');
-		JToolBarHelper::editList('stock.edit');
-		JToolBarHelper::deleteList('COM_AC19_DELETE_CONFIRM', 'stocks.delete');		
-		JToolbarHelper::publish('stocks.publish', 'JTOOLBAR_PUBLISH', true);
-		JToolbarHelper::unpublish('stocks.unpublish', 'JTOOLBAR_UNPUBLISH', true);
-		JToolbarHelper::archiveList('stocks.archive');
-		JToolbarHelper::checkin('stocks.checkin');
-		JToolbarHelper::trash('stocks.trash');
+		JToolBarHelper::addNew('categorie.add');
+		JToolBarHelper::editList('categorie.edit');
+		JToolBarHelper::deleteList('COM_AC19_DELETE_CONFIRM', 'categories.delete');		
+		JToolbarHelper::publish('categories.publish', 'JTOOLBAR_PUBLISH', true);
+		JToolbarHelper::unpublish('categories.unpublish', 'JTOOLBAR_UNPUBLISH', true);
+		JToolbarHelper::archiveList('categories.archive');
+		JToolbarHelper::checkin('categories.checkin');
+		JToolbarHelper::trash('categories.trash');
 		JToolbarHelper::preferences('com_ac19');
 	}
 
@@ -73,11 +73,8 @@ class Ac19ViewStocks extends JViewLegacy
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			's.id' => JText::_('COM_AC19_STOCKS_ID'),
-			's.qte' => JText::_('COM_AC19_STOCKS_QTE'),
-			'magasin' => JText::_('COM_AC19_STOCKS_MAGASIN_ID'),
-			's.produits_id' => JText::_('COM_AC19_STOCKS_PRODUITS_ID'),
-			's.id' => "Id"
+			'c.titre' => "Titre",
+			'c.id' => "Id"
 		);
 	}  
 	

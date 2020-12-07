@@ -8,21 +8,25 @@ JHtml::_('formbehavior.chosen', 'select');
 <script type="text/javascript">
 	Joomla.submitbutton = function(task)
 	{
-		if (task == 'catalogue.cancel' || document.formvalidator.isValid(document.id('ac19-form')))
+		if (task == 'message.cancel' || document.formvalidator.isValid(document.id('ac19-form')))
 		{
 			Joomla.submitform(task, document.getElementById('ac19-form'));
 		}
 	}
 </script>
 
-<form action="<?php echo JRoute::_('index.php?option=com_ac19&layout=edit&id='.(int) $this->item->id); ?>"
+<form action="<?php echo JRoute::_('index.php?option=com_ac19&view=message&layout=edit&id='.(int) $this->item->id); ?>"
       method="post" name="adminForm" id="ac19-form" class="form-validate">
 
 	<div class="form-inline form-inline-header">
 		<div class="control-group">
-			<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
-			<div class="controls"><?php echo $this->form->getInput('titre'); ?></div>
-		</div>										
+			<div class="control-label"><?php echo $this->form->getLabel('id'); ?></div>
+			<div class="controls"><?php echo $this->form->getInput('id'); ?></div>
+		</div>									
+		<div class="control-group">
+			<div class="control-label"><?php echo $this->form->getLabel('alias'); ?></div>
+			<div class="controls"><?php echo $this->form->getInput('alias'); ?></div>
+		</div>					
 	</div>					
 
 	<div class="form-horizontal">
@@ -34,34 +38,37 @@ JHtml::_('formbehavior.chosen', 'select');
 				<div class="form-vertical">
 					<div class="control-group">
 						<div class="span2">
-							<div class="control-label"><?php echo $this->form->getLabel('description'); ?></div>
+							<div class="control-group">
+								<div class="control-label"><?php echo $this->form->getLabel('date'); ?></div>
+								<div class="controls"><?php echo $this->form->getInput('date'); ?></div>
+							</div>
+							<div class="control-group">
+								<div class="control-label"><?php echo $this->form->getLabel('objet'); ?></div>
+								<div class="controls"><?php echo $this->form->getInput('objet'); ?></div>
+							</div>
+							<div class="control-group">
+								<div class="control-label"><?php echo $this->form->getLabel('contenu'); ?></div>
+								<div class="controls"><?php echo $this->form->getInput('contenu'); ?></div>
+							</div>
+							<div class="control-group">
+								<div class="control-label"><?php echo $this->form->getLabel('utilisateurs_aut_id'); ?></div>
+								<div class="controls"><?php echo $this->form->getInput('utilisateurs_aut_id'); ?></div>
+							</div>
+							<div class="control-group">
+								<div class="control-label"><?php echo $this->form->getLabel('utilisateurs_dest_id'); ?></div>
+								<div class="controls"><?php echo $this->form->getInput('utilisateurs_dest_id'); ?></div>
+							</div>
 						</div>					
 						<div class="span7">
-							<div class="controls"><?php echo $this->form->getInput('description'); ?></div>
+
 						</div>					
 					</div>					
 					<div class="control-group">
 						<div class="span2">
-							<div class="control-label"><?php echo $this->form->getLabel('dateDebut'); ?></div>
+							
 						</div>					
 						<div class="span7">
-							<div class="controls"><?php echo $this->form->getInput('dateDebut'); ?></div>
-						</div>					
-					</div>	
-					<div class="control-group">
-						<div class="span2">
-							<div class="control-label"><?php echo $this->form->getLabel('dateFin'); ?></div>
-						</div>					
-						<div class="span7">
-							<div class="controls"><?php echo $this->form->getInput('dateFin'); ?></div>
-						</div>					
-					</div>	
-					<div class="control-group">
-						<div class="span2">
-							<div class="control-label"><?php echo $this->form->getLabel('partenaires_id'); ?></div>
-						</div>					
-						<div class="span7">
-							<div class="controls"><?php echo $this->form->getInput('partenaires_id'); ?></div>
+					
 						</div>					
 					</div>					
 				</div>
