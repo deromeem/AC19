@@ -5,23 +5,30 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="catalogue" type="sql" label="COM_AC19_CATAL_CATEGS_CATALOGUE"
-            description="COM_AC19_CATAL_CATEGS_CATALOGUE"
-			query="SELECT id, titre FROM #__ac19_catalogues ORDER BY titre" 
-            key_field="id" value_field="titre" required="false"
-        />   
-
-		<field name="categorie" type="sql" label="COM_AC19_CATAL_CATEGS_CATEGORIE"
-            description="COM_AC19_CATAL_CATEGS_CATEGORIE"
-			query="SELECT id, titre FROM #__ac19_categories ORDER BY titre"
-            key_field="id" value_field="titre" required="false"
-        />  
+        <field name="qte" type="text" label="COM_AC19_STOCKS_QTE"
+            description="COM_AC19_UTILISATEURS_QUANTITE"
+            size="40" class="input-large-text" default="" required="true"
+        />     
+		
 		<field name="alias" type="text"
 			label="JFIELD_ALIAS_LABEL"
 			description="JFIELD_ALIAS_DESC"
 			hint="JFIELD_ALIAS_PLACEHOLDER"
 			class="inputbox" size="45"
 		/>
+
+		<field name="magasins_id" type="sql" default="" label="COM_AC19_STOCKS_MAGASIN" 
+			description="COM_AC19_STOCKS_MAGASIN" 
+			query="SELECT id, enseigne FROM #__ac19_magasins ORDER BY enseigne" 
+			key_field="id" value_field="enseigne" required="false"
+		/>
+
+		<field name="produits_id" type="sql" default="" label="COM_AC19_STOCKS_PRODUIT" 
+			description="COM_AC19_STOCKS_PRODUIT" 
+			query="SELECT id, titre FROM #__ac19_produits ORDER BY titre" 
+			key_field="id" value_field="titre" required="false"
+		/>
+ 
         <field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"
