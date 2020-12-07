@@ -33,8 +33,8 @@
         />  
         <field name="categorie_id" type="sql" label="COM_AC19_CATEGORIE"
             description="COM_AC19_CATEGORIE"
-            query="SELECT id, categorie FROM #__ac19_categorie ORDER BY categorie" 
-            size="40" class="inputbox" default="" required="False"
+            query="SELECT id, titre FROM #__ac19_categories ORDER BY titre" 
+            key_field="id" value_field="titre" required="false"
         />  
         <field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
