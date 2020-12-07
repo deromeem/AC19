@@ -7,7 +7,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 $saveOrder	= $listOrder == 'ordering';
 if ($saveOrder)
 {
-	$saveOrderingUrl = 'index.php?option=com_ac19&task=catal_categs.saveOrderAjax&tmpl=component';
+	$saveOrderingUrl = 'index.php?option=com_ac19&task=produits.saveOrderAjax&tmpl=component';
 	JHtml::_('sortablelist.sortable', 'articleList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
 }
 ?>
@@ -19,19 +19,19 @@ if ($saveOrder)
 		</td>
 		<td class="wrap has-context">
 			<div class="pull-left">
-				<a href="<?php echo JRoute::_('index.php?option=com_ac19&task=catal_categ.edit&id='.(int) $item->id); ?>">
-					<?php echo $this->escape($item->alias); ?>
+				<a href="<?php echo JRoute::_('index.php?option=com_ac19&task=produit.edit&id='.(int) $item->id); ?>">
+					<?php echo $this->escape($item->titre); ?>
 				</a>
 			</div>
 		</td>
-		<td class="center hidden-tablet hidden-phone">
+		<td>
+			<?php echo $item->prix; ?>
+		</td>
+		<td>
 			<?php echo $item->categorie; ?>
 		</td>
-		<td class="center hidden-tablet hidden-phone">
-			<?php echo $item->catalogue; ?>
-		</td>
 		<td class="center hidden-phone">
-			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'catal_categs.', true); ?>
+			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'produits.', true); ?>
 		</td>
 		<td class="center hidden-tablet hidden-phone">
 			<?php echo JHtml::_('date', $item->modified, $this->paramDateFmt); ?>

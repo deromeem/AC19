@@ -8,7 +8,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <script type="text/javascript">
 	Joomla.submitbutton = function(task)
 	{
-		if (task == 'produit.cancel' || document.formvalidator.isValid(document.id('ac19-form')))
+		if (task == 'catalogue.cancel' || document.formvalidator.isValid(document.id('ac19-form')))
 		{
 			Joomla.submitform(task, document.getElementById('ac19-form'));
 		}
@@ -22,47 +22,51 @@ JHtml::_('formbehavior.chosen', 'select');
 		<div class="control-group">
 			<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
 			<div class="controls"><?php echo $this->form->getInput('titre'); ?></div>
-		</div>						
-		<div class="control-group">
-			<div class="control-label"><?php echo $this->form->getLabel('alias'); ?></div>
-			<div class="controls"><?php echo $this->form->getInput('alias'); ?></div>
-		</div>					
+		</div>										
 	</div>					
 
 	<div class="form-horizontal">
 		<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'details')); ?>
-		
-		<div class="span9">
-			<div class="form-vertical">
-				<div class="control-group">
-					<div class="span2">
-						<div class="control-label"><?php echo $this->form->getLabel('prix'); ?></div>
-					</div>					
-					<div class="span7">
-						<div class="controls"><?php echo $this->form->getInput('prix'); ?></div>
-					</div>					
-				</div>					
-				<div class="control-group">
-					<div class="span2">
-						<div class="control-label"><?php echo $this->form->getLabel('categorie_id'); ?></div>
-					</div>					
-					<div class="span7">
-						<div class="controls"><?php echo $this->form->getInput('categorie_id'); ?></div>
-					</div>					
-				</div>					
-			</div>
-			<div class="form-vertical">
-				<?php echo $this->form->getControlGroup('description'); ?>
-			</div>
-		</div>
 
 		<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'details', JText::_('COM_AC19_DETAIL')); ?>
 		<div class="row-fluid ">
-			<div class="span3">
-				<?php echo "<img src='" . "../" . $this->item->codeBarre . "' border='0' />"; ?>
+			<div class="span9">
 				<div class="form-vertical">
-					<?php echo $this->form->getControlGroup('codeBarre'); ?>
+					<div class="control-group">
+						<div class="span2">
+							<div class="control-label"><?php echo $this->form->getLabel('description'); ?></div>
+						</div>					
+						<div class="span7">
+							<div class="controls"><?php echo $this->form->getInput('description'); ?></div>
+						</div>					
+					</div>					
+					<div class="control-group">
+						<div class="span2">
+							<div class="control-label"><?php echo $this->form->getLabel('dateDebut'); ?></div>
+						</div>					
+						<div class="span7">
+							<div class="controls"><?php echo $this->form->getInput('dateDebut'); ?></div>
+						</div>					
+					</div>	
+					<div class="control-group">
+						<div class="span2">
+							<div class="control-label"><?php echo $this->form->getLabel('dateFin'); ?></div>
+						</div>					
+						<div class="span7">
+							<div class="controls"><?php echo $this->form->getInput('dateFin'); ?></div>
+						</div>					
+					</div>	
+					<div class="control-group">
+						<div class="span2">
+							<div class="control-label"><?php echo $this->form->getLabel('partenaires_id'); ?></div>
+						</div>					
+						<div class="span7">
+							<div class="controls"><?php echo $this->form->getInput('partenaires_id'); ?></div>
+						</div>					
+					</div>					
 				</div>
+			</div>
+			<div class="span3">
 				<?php echo JLayoutHelper::render('joomla.edit.global', $this); ?>
 			</div>
 		</div>
