@@ -5,13 +5,13 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="nom" type="text" label="COM_AC19_UTILISATEURS_NOM"
-            description="COM_AC19_UTILISATEURS_NOM"
+        <field name="numCde" type="text" label="COM_AC19_COMMANDES_NUM_CDE"
+            description="COM_AC19_COMMANDES_NUM_CDE"
             size="40" class="input-large-text" default="" required="true"
         />   
 
-		<field name="prenom" type="text" label="COM_AC19_UTILISATEURS_PRENOM"
-            description="COM_AC19_UTILISATEURS_PRENOM"
+		<field name="dateHeureCde" type="text" label="COM_AC19_COMMANDES_DATE_HEURE_CDE"
+            description="COM_AC19_COMMANDES_DATE_HEURE_CDE"
             size="40" class="input-large-text" default="" required="true"
         />   
 		<field name="alias" type="text"
@@ -20,14 +20,33 @@
 			hint="JFIELD_ALIAS_PLACEHOLDER"
 			class="inputbox" size="45"
 		/>
-        <field name="email" type="text" label="COM_AC19_UTILISATEURS_EMAIL"
-            description="COM_AC19_UTILISATEURS_EMAIL"
+        <field name="dateHeureLivr" type="text" label="COM_AC19_COMMANDES_DATE_HEURE_LIVR"
+            description="COM_AC19_COMMANDES_DATE_HEURE_LIVR"
             size="40" class="input-xxlarge" default="" required="true"
         />  
-        <field name="tel" type="text" label="COM_AC19_UTILISATEURS_TEL"
-            description="COM_AC19_UTILISATEURS_TEL"
+        <field name="prixTotal" type="text" label="COM_AC19_COMMANDES_PRIX_TOTAL"
+            description="COM_AC19_COMMANDES_PRIX_TOTAL"
             size="40" class="inputbox" default="" required="False"
         />  
+		<field name="refPaiement" type="text" label="COM_AC19_COMMANDES_REF_PAIEMENT"
+            description="COM_AC19_COMMANDES_REF_PAIEMENT"
+            size="40" class="inputbox" default="" required="False"
+        /> 
+		<field name="magasins_id" type="sql" default="" label="COM_AC19_COMMANDES_MAGASIN" 
+			description="COM_AC19_COMMANDES_MAGASIN"
+			query="SELECT id, enseigne FROM #__ac19_magasins ORDER BY enseigne" 
+			key_field="id" value_field="enseigne" required="false"
+		/>
+		<field name="particuliers_id" type="sql" default="" label="COM_AC19_PARTICULIER" 
+			description="COM_AC19_PARTICULIER"
+			query="SELECT id, email FROM #__ac19_particuliers ORDER BY email" 
+			key_field="id" value_field="email" required="false"
+		/>
+		<field name="etat_cdes_id" type="sql" default="" label="COM_AC19_COMMANDES_ETAT_CDE" 
+			description="COM_AC19_COMMANDES_ETAT_CDE"
+			query="SELECT id, etatCde FROM #__ac19_etat_cdes ORDER BY etatCde" 
+			key_field="id" value_field="etatCde" required="false"
+		/>
         <field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"
