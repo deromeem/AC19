@@ -14,6 +14,9 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         </th>
         <th width="30%" class="nowrap">
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_PRODUITS_PRIX', 'p.prix', $listDirn, $listOrder) ?>
+		</th>
+		<th width="30%" class="nowrap">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_PRODUITS_CATEGORIE', 'p.categories_id', $listDirn, $listOrder) ?>
         </th>
 		<th width="5%" style="min-width:55px" class="nowrap center hidden-phone">
 			<?php echo JHtml::_('grid.sort', 'Publié', 'p.published', $listDirn, $listOrder) ?>

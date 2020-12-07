@@ -75,6 +75,7 @@ class Ac19ViewProduits extends JViewLegacy
 		return array(
 			'p.titre' => JText::_('COM_AC19_PRODUITS_TITRE'),
 			'p.prix' => JText::_('COM_AC19_PRODUITS_PRIX'),
+			'p.categories_id' => JText::_('COM_AC19_PRODUITS_CATEGORIE'),
 			'p.id' => "Id"
 		);
 	}  

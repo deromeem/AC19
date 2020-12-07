@@ -15,7 +15,8 @@ class Ac19ModelProduits extends JModelList
 				'prix', 'p.prix',
 				'published', 'p.published',
 				'hits', 'p.hits',
-				'modified', 'p.modified'
+				'modified', 'p.modified',
+				'categories', 'p.categories_id'
 			);
 		}
 		parent::__construct($config);
@@ -35,11 +36,13 @@ class Ac19ModelProduits extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('p.id, p.titre, p.description, p.prix, p.published, p.hits, p.modified');
+		$query->select('p.id, p.titre, p.description, p.prix, p.published, p.hits, p.modified,p.categories_id');
 		$query->from('#__ac19_produits p');
 
 		// joint la table _users de Joomla
 		// $query->select('ul.name AS linked_user')->join('LEFT', '#__users AS ul ON ul.id=a.affected_to');
+
+		$query->select('c.titre AS categorie')->join('LEFT', '#__ac19_categories AS c ON c.id=p.categories_id');
 
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');

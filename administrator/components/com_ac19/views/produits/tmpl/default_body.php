@@ -27,6 +27,9 @@ if ($saveOrder)
 		<td>
 			<?php echo $item->prix; ?>
 		</td>
+		<td>
+			<?php echo $item->categorie; ?>
+		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'produits.', true); ?>
 		</td>
