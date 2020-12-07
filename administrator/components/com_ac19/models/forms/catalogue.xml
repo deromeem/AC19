@@ -17,12 +17,12 @@
 
 		<field name="dateDebut" type="calendar" label="COM_AC19_CATALOGUES_DATE_DEBUT"
             description="COM_AC19_CATALOGUES_DATE_DEBUT"
-            size="40" class="input-large-text" default="" required="true"
+            size="40" default="" required="true"
         />
 
 		<field name="dateFin" type="calendar" label="COM_AC19_CATALOGUES_DATE_FIN"
             description="COM_AC19_CATALOGUES_DATE_FIN"
-            size="40" class="input-large-text" default="" required="true"
+            size="40" default="" required="true" 
         />
 
 		<field name="partenaires_id" type="sql" default="" label="COM_AC19_CATALOGUES_PARTENAIRE" 
