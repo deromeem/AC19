@@ -23,19 +23,6 @@ class Ac19ModelPartenaires extends JModelList
 
 	protected function populateState($ordering = null, $direction = null)
 	{
-		// // récupère les informations de la session utilisateur nécessaires au paramétrage de l'écran
-		// $search = $this->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
-		// $this->setState('filter.search', $search);
-
-		// $codeAPE_NAF = $this->getUserStateFromRequest($this->context.'.filter.codeAPE_NAF', 'filter_codeAPE_NAF', '');
-		// $this->setState('filter.codeAPE_NAF', $codeAPE_NAF);
-
-		// $pay = $this->getUserStateFromRequest($this->context.'.filter.pay', 'filter_pay', '');
-		// $this->setState('filter.pay', $pay);
-
-		// $published = $this->getUserStateFromRequest($this->context.'.filter.published', 'filter_published', '');
-		// $this->setState('filter.published', $published);
-
 		parent::populateState('modified', 'desc');
 		parent::populateState('p.email', 'ASC');
 	}
