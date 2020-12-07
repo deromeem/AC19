@@ -12,23 +12,29 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         <th width="30%">
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ENSEIGNE', 'm.enseigne', $listDirn, $listOrder) ?>
         </th>
-        <th width="30%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ADR_RUE', 'm.prenom', $listDirn, $listOrder) ?>
-        </th>
-        <th width="20%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ADR_VILLE', 'm.email', $listDirn, $listOrder) ?>
-        </th>
-        <th width="20%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ADR_CP', 'm.tel', $listDirn, $listOrder) ?>
+        <th width="30%">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_TYPE_MAGS_TYPE_MAG', 'm.typeMag', $listDirn, $listOrder) ?>
         </th>
         <th width="30%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_TEL', 'm.prenom', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_PARTENAIRES_RAISON_SOCIALE', 'm.raisonSociale', $listDirn, $listOrder) ?>
+        </th>
+        <th width="30%" class="nowrap">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ADR_RUE', 'm.adrRue', $listDirn, $listOrder) ?>
         </th>
         <th width="20%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_LATITUDE', 'm.email', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ADR_VILLE', 'm.adrVille', $listDirn, $listOrder) ?>
         </th>
         <th width="20%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_LONGITUDE', 'm.tel', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ADR_CP', 'm.adrCP', $listDirn, $listOrder) ?>
+        </th>
+        <th width="30%" class="nowrap">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_TEL', 'm.tel', $listDirn, $listOrder) ?>
+        </th>
+        <th width="20%" class="nowrap">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_LATITUDE', 'm.latitude', $listDirn, $listOrder) ?>
+        </th>
+        <th width="20%" class="nowrap">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_LONGITUDE', 'm.longitude', $listDirn, $listOrder) ?>
         </th>
 		<th width="5%" style="min-width:55px" class="nowrap center hidden-phone">
 			<?php echo JHtml::_('grid.sort', 'Publié', 'm.published', $listDirn, $listOrder) ?>

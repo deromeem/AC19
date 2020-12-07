@@ -25,7 +25,10 @@ if ($saveOrder)
 			</div>
 		</td>
 		<td>
-			<?php echo $item->enseigne; ?>
+			<?php echo $item->typeMag; ?>
+		</td>
+		<td>
+			<?php echo $item->raisonSociale; ?>
 		</td>
 		<td>
 			<?php echo $item->adrRue; ?>

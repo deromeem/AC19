@@ -37,9 +37,6 @@ class Ac19ModelMagasins extends JModelList
 		$type_mags_id = $this->getUserStateFromRequest($this->context.'.filter.type_mags_id', 'filter_type_mags_id', '');
 		$this->setState('filter.type_mags_id', $type_mags_id);
 
-		$pay = $this->getUserStateFromRequest($this->context.'.filter.pay', 'filter_pay', '');
-		$this->setState('filter.pay', $pay);
-
 		$partenaires_id = $this->getUserStateFromRequest($this->context.'.filter.partenaires_id', 'filter_partenaires_id', '');
 		$this->setState('filter.partenaires_id', $partenaires_id);
 
@@ -58,7 +55,7 @@ class Ac19ModelMagasins extends JModelList
 		$query->select('tm.typeMag AS typeMag ')->join('LEFT', '#__ac19_type_mags AS tm ON tm.id=m.type_mags_id');
 
 		// //joint la table _users de Joomla
-		// $query->select('ul.name AS linked_user')->join('LEFT', '#__users AS ul ON ul.id=a.affected_to');
+		$query->select('p.raisonSociale AS raisonSociale')->join('LEFT', '#__ac19_partenaires AS p ON p.id=m.partenaires_id');
 
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
@@ -79,17 +76,6 @@ class Ac19ModelMagasins extends JModelList
 				$query->where('('.implode(' OR ', $searches).')');
 			}
 		}
-
-		// filtre selon l'état du filtre 'filter_codeAPE_NAF'
-		$codeAPE_NAF = $this->getState('filter.codeAPE_NAF');
-		if (is_numeric($codeAPE_NAF)) {
-			$query->where('m.codeAPE_NAF=' . (int) $codeAPE_NAF);
-		}
-		// filtre selon l'état du filtre 'filter_pay'
-		$pay = $this->getState('filter.pay');
-		if (is_numeric($pay)) {
-			$query->where('m.pays_id=' . (int) $pay);
-		}
 		// filtre selon l'état du filtre 'filter_published'
 		$published = $this->getState('filter.published');
 		if (is_numeric($published)) {
@@ -109,15 +95,4 @@ class Ac19ModelMagasins extends JModelList
 		return $query;
 	}
 
-	// public function getPays()
-	// {
-	// 	$query = $this->_db->getQuery(true);
-	// 	$query->select('id, pays');
-	// 	$query->from('#__annuaire_pays');
-	// 	$query->where('published=1');
-	// 	$query->order('pays ASC');
-	// 	$this->_db->setQuery($query);
-	// 	$pays = $this->_db->loadObjectList();
-	// 	return $pays;
-	// }	
 }
