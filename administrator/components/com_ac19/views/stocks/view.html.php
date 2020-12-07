@@ -75,7 +75,7 @@ class Ac19ViewStocks extends JViewLegacy
 		return array(
 			's.id' => JText::_('COM_AC19_STOCKS_ID'),
 			's.qte' => JText::_('COM_AC19_STOCKS_QTE'),
-			's.magasin_id' => JText::_('COM_AC19_STOCKS_MAGASIN_ID'),
+			'magasin' => JText::_('COM_AC19_STOCKS_MAGASIN_ID'),
 			's.produits_id' => JText::_('COM_AC19_STOCKS_PRODUITS_ID'),
 			's.id' => "Id"
 		);
