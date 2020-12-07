@@ -31,9 +31,6 @@ if ($saveOrder)
 			<?php echo $item->raisonSociale; ?>
 		</td>
 		<td>
-			<?php echo $item->adrRue; ?>
-		</td>
-		<td>
 			<?php echo $item->adrVille; ?>
 		</td><td>
 			<?php echo $item->adrCP; ?>

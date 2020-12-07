@@ -15,13 +15,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         <th width="30%">
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_TYPE_MAGS_TYPE_MAG', 'm.typeMag', $listDirn, $listOrder) ?>
         </th>
-        <th width="30%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_PARTENAIRES_RAISON_SOCIALE', 'm.raisonSociale', $listDirn, $listOrder) ?>
-        </th>
-        <th width="30%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ADR_RUE', 'm.adrRue', $listDirn, $listOrder) ?>
-        </th>
         <th width="20%" class="nowrap">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_PARTENAIRES_RAISON_SOCIALE', 'm.raisonSociale', $listDirn, $listOrder) ?>
+        </th> 
+        <th width="30%" class="nowrap">
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_MAGASINS_ADR_VILLE', 'm.adrVille', $listDirn, $listOrder) ?>
         </th>
         <th width="20%" class="nowrap">
