@@ -27,9 +27,9 @@
 			hint="JFIELD_ALIAS_PLACEHOLDER"
 			class="inputbox" size="45"
 		/>
-        <field name="codebarre" type="imagelist" label="COM_AC19_PRODUITS_CODE_BARRE"
+        <field name="codeBarre" type="imagelist" label="COM_AC19_PRODUITS_CODE_BARRE"
             description="COM_AC19_PRODUITS_CODE_BARRE"
-            directory="images/ac19" exclude="" stripext=""
+            directory="images" exclude="" stripext=""
         />  
         <field name="categorie_id" type="sql" label="COM_AC19_CATEGORIE"
             description="COM_AC19_CATEGORIE"

@@ -59,9 +59,9 @@ JHtml::_('formbehavior.chosen', 'select');
 		<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'details', JText::_('COM_AC19_DETAIL')); ?>
 		<div class="row-fluid ">
 			<div class="span3">
-				<?php echo "<img src='" . "../" . $this->item->codebarre . "' border='0' />"; ?>
+				<?php echo "<img src='" . "../../" . $this->item->codeBarre . "' border='0' />"; ?>
 				<div class="form-vertical">
-					<?php echo $this->form->getControlGroup('codebarre'); ?>
+					<?php echo $this->form->getControlGroup('codeBarre'); ?>
 				</div>
 				<?php echo JLayoutHelper::render('joomla.edit.global', $this); ?>
 			</div>
