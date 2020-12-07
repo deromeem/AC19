@@ -15,20 +15,20 @@
             size="40" class="input-large-text" default="" required="true"
         />   
 
-		<field name="dateDebut" type="datetime" label="COM_AC19_CATALOGUES_DATE_DEBUT"
+		<field name="dateDebut" type="calendar" label="COM_AC19_CATALOGUES_DATE_DEBUT"
             description="COM_AC19_CATALOGUES_DATE_DEBUT"
-            size="40" class="input-large-text" default="" required="true"
+            size="40" default="" required="true"
         />
 
-		<field name="dateFin" type="datetime" label="COM_AC19_CATALOGUES_DATE_FIN"
+		<field name="dateFin" type="calendar" label="COM_AC19_CATALOGUES_DATE_FIN"
             description="COM_AC19_CATALOGUES_DATE_FIN"
-            size="40" class="input-large-text" default="" required="true"
+            size="40" default="" required="true" 
         />
 
 		<field name="partenaires_id" type="sql" default="" label="COM_AC19_CATALOGUES_PARTENAIRE" 
 			description="COM_AC19_CATALOGUES_PARTENAIRE" 
-			query="SELECT id, partenaire FROM #__annuaire_partenaires ORDER BY partenaire" 
-			key_field="id" value_field="partenaire" required="false"
+			query="SELECT id, raisonSociale FROM #__ac19_partenaires ORDER BY raisonSociale" 
+			key_field="id" value_field="raisonSociale" required="false"
 		/>
 
 		<field name="alias" type="text"

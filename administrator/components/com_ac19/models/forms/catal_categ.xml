@@ -7,12 +7,14 @@
 		
         <field name="catalogue" type="sql" label="COM_AC19_CATAL_CATEGS_CATALOGUE"
             description="COM_AC19_CATAL_CATEGS_CATALOGUE"
-            size="40" class="input-large-text" default="" required="true"
+			query="SELECT id, titre FROM #__ac19_catalogues ORDER BY titre" 
+            key_field="id" value_field="titre" required="false"
         />   
 
 		<field name="categorie" type="sql" label="COM_AC19_CATAL_CATEGS_CATEGORIE"
             description="COM_AC19_CATAL_CATEGS_CATEGORIE"
-            size="40" class="input-large-text" default="" required="true"
+			query="SELECT id, titre FROM #__ac19_categories ORDER BY titre"
+            key_field="id" value_field="titre" required="false"
         />  
 		<field name="alias" type="text"
 			label="JFIELD_ALIAS_LABEL"

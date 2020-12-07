@@ -27,14 +27,14 @@
 			hint="JFIELD_ALIAS_PLACEHOLDER"
 			class="inputbox" size="45"
 		/>
-        <field name="codebarre" type="imagelist" label="COM_AC19_PRODUITS_CODE_BARRE"
+        <field name="codeBarre" type="imagelist" label="COM_AC19_PRODUITS_CODE_BARRE"
             description="COM_AC19_PRODUITS_CODE_BARRE"
-            directory="images/ac19" exclude="" stripext=""
+            directory="images" exclude="" stripext=""
         />  
         <field name="categorie_id" type="sql" label="COM_AC19_CATEGORIE"
             description="COM_AC19_CATEGORIE"
-            query="SELECT id, categorie FROM #__ac19_categorie ORDER BY categorie" 
-            size="40" class="inputbox" default="" required="False"
+            query="SELECT id, titre FROM #__ac19_categories ORDER BY titre" 
+            key_field="id" value_field="titre" required="false"
         />  
         <field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
