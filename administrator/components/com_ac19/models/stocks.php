@@ -87,10 +87,11 @@ class Ac19ModelStocks extends JModelList
 
 		// tri des colonnes
 		$orderCol = $this->state->get('list.ordering', 's.id');
+		$orderCol = $this->state->get('list.ordering', 'magasin');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
+		// echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
 		return $query;
 	}
 }
