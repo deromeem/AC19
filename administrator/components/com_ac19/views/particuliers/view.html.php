@@ -73,7 +73,7 @@ class Ac19ViewParticuliers extends JViewLegacy
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'p.email' => JText::_('COM_AC19_PARTICULIERS_EMAIL'),
+			'prenom' => JText::_('COM_AC19_PARTICULIERS_EMAIL'),
 			'p.adrVille' => JText::_('COM_AC19_PARTICULIERS_ADR_VILLE'),
 			'p.adrRue' => JText::_('COM_AC19_PARTICULIERS_ADR_RUE'),
 

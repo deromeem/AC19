@@ -43,7 +43,7 @@ class Ac19ViewCommandes extends JViewLegacy
 	protected function addToolBar() 
 	{
 		// affiche le titre de la page
-		JToolBarHelper::title(JText::_('COM_AC19_OPTIONS')." : ".JText::_('COM_AC19_UTILISATEURS'));
+		JToolBarHelper::title(JText::_('COM_AC19_OPTIONS')." : ".JText::_('COM_AC19_COMMANDES'));
 		
 		// affiche les boutons d'action
 		JToolBarHelper::addNew('commande.add');

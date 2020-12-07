@@ -32,7 +32,7 @@ class Ac19ModelParticuliers extends JModelList
 		$this->setState('filter.search', $search);
 
 		// parent::populateState('modified', 'desc');
-		parent::populateState('p.email', 'ASC');
+		parent::populateState('nom', 'prenom','ASC');
 	}
 	
 	protected function getListQuery()
@@ -41,6 +41,9 @@ class Ac19ModelParticuliers extends JModelList
 		$query = $this->_db->getQuery(true);
 		$query->select('p.id, p.email, p.adrRue, p.adrVille, p.adrCP, p.latitude, p.longitude, p.alias, p.published, p.hits, p.modified');
 		$query->from('#__ac19_particuliers p');
+
+		// joint la table utilisateurs de Joomla
+		$query->select('u.nom AS nom, u.prenom AS prenom')->join('LEFT', '#__ac19_utilisateurs AS u ON u.email =p.email');
 
 		// $query->select('p.pays AS pays')->join('LEFT', '#__annuaire_pays AS p ON p.id=p.');
 
@@ -59,7 +62,8 @@ class Ac19ModelParticuliers extends JModelList
 				$search = $this->_db->Quote('%'.$this->_db->escape($search, true).'%');
 				// Compile les clauses de recherche
 				$searches	= array();
-				$searches[]	= 'p.email LIKE '.$search;
+				$searches[]	= 'nom LIKE '.$search;
+				$searches[]	= 'prenom LIKE '.$search;
 				$searches[]	= 'p.adrRue LIKE '.$search;
 				$searches[]	= 'p.adrVille LIKE '.$search;
 				// Ajoute les clauses à la requête
@@ -68,11 +72,12 @@ class Ac19ModelParticuliers extends JModelList
 		}
 
 		// tri des colonnes
-		$orderCol = $this->state->get('list.ordering', 'p.email');
+		$orderCol = $this->state->get('list.ordering', 'nom');
+		$orderCol = $this->state->get('list.ordering', 'prenom');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		// echo nl2br(str_replace('#__','egs_',$query));			// TEST/DEBUG
+		echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
 		return $query;
 	}
 }

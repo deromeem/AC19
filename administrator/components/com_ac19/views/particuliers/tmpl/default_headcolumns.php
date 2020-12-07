@@ -10,7 +10,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			<?php echo JHtml::_('grid.checkall'); ?>
         </th>                   
         <th width="30%">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_PARTICULIERS_EMAIL', 'p.email', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_UTILISATEURS_NOM', 'nom', $listDirn, $listOrder) ?>
+        </th>
+		<th width="30%">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_UTILISATEURS_PRENOM', 'prenom', $listDirn, $listOrder) ?>
         </th>
         <th width="30%" class="nowrap">
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_PARTICULIERS_ADR_VILLE', 'p.adrVille', $listDirn, $listOrder) ?>
@@ -21,12 +24,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		<th width="20%" class="nowrap">
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_PARTICULIERS_CP', 'p.adrCP', $listDirn, $listOrder) ?>
         </th>
-        <th width="20%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_PARTICULIERS_LATITUDE', 'p.latitude', $listDirn, $listOrder) ?>
-		</th>
-		<th width="20%" class="nowrap">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_PARTICULIERS_LONGITUDE', 'p.longitude', $listDirn, $listOrder) ?>
-		</th>
 		<th width="5%" style="min-width:55px" class="nowrap center hidden-phone">
 			<?php echo JHtml::_('grid.sort', 'Publié', 'p.published', $listDirn, $listOrder) ?>
         </th>
