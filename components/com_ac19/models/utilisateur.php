@@ -21,10 +21,10 @@ class Ac19ModelUtilisateur extends JModelItem
 		// Initialise l'id
 		$pk = (!empty($pk)) ? $pk : (int) $this->getState($this->_context.'.id');
 		
-		if empty($pk) {
+		if (empty($pk)) {
 			// Si pas de id donné : recherche si un utilisateur Joomla est connecté :
 			$user = JFactory::getUser();
-			if isset($user) {
+			if (isset($user)) {
 				// Un utilisateur est connecté : recherche de ses données
 				$email = $user->email;
 				$db = $this->getDbo();
