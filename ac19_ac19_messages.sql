@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 10 déc. 2020 à 11:20
+-- Généré le : mar. 15 déc. 2020 à 11:45
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.2.30
 
@@ -51,7 +51,8 @@ INSERT INTO `ac19_ac19_messages` (`id`, `date`, `objet`, `contenu`, `utilisateur
 (1, '2020-01-01 00:00:00', '-', '', 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, '2020-12-10 08:36:04', 'Recherche de bénévoles', 'Bonjour,\r\n\r\nnous sommes à la recherche de bénévoles pour contribuer aux actions humanitaires d\'AC19 à Paris.\r\nConnaissez-vous dans votre entourage des personnes qui pourraient être intéressées ?\r\n\r\nMerci d\'avance pour votre réponse.\r\n\r\nCordialement,\r\nAlma RICHAUD\r\nCoordinatrice AC19', 4, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (3, '2020-12-10 08:45:27', 'Recherche de bénévoles', 'Bonjour,\r\n\r\nnous sommes à la recherche de bénévoles pour contribuer aux actions humanitaires d\'AC19 à Paris.\r\nConnaissez-vous dans votre entourage des personnes qui pourraient être intéressées ?\r\n\r\nMerci d\'avance pour votre réponse.\r\n\r\nCordialement,\r\nAlma RICHAUD\r\nCoordinatrice AC19', 4, 6, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
-(4, '2020-12-10 08:47:07', 'Vos voisins ont besoin de notre aide', 'Bonjour Monsieur,\r\n\r\nvoici quelques semaines déjà que notre association AC19 vous rend des services à domicile pour vos achats et livraisons de produits de première nécessité.\r\n\r\nDe nouveaux bénévoles venant d\'être recrutés dans votre quartier, nous sommes maintenant en mesure d\'étendre nos services à vos voisins qui en auraient besoin.\r\n\r\nNous serions très heureux de pouvoir aussi les aider. Merci de nous le faire savoir.\r\n\r\nCordialement,\r\nSami JAOUI,\r\nBénévole AC19 - Paris 15e', 3, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
+(4, '2020-12-10 08:47:07', 'Vos voisins ont besoin de notre aide', 'Bonjour Monsieur,\r\n\r\nvoici quelques semaines déjà que notre association AC19 vous rend des services à domicile pour vos achats et livraisons de produits de première nécessité.\r\n\r\nDe nouveaux bénévoles venant d\'être recrutés dans votre quartier, nous sommes maintenant en mesure d\'étendre nos services à vos voisins qui en auraient besoin.\r\n\r\nNous serions très heureux de pouvoir aussi les aider. Merci de nous le faire savoir.\r\n\r\nCordialement,\r\nSami JAOUI,\r\nBénévole AC19 - Paris 15e', 3, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(5, '2020-12-15 10:58:00', 'Livraison de votre commande du 14/12/2020', 'Bonjour Monsieur,\r\n\r\nje vous confirme que je vais livrer à votre domicile en début d\'après-midi la commande que vous avez passée hier sur notre site AC19.\r\n\r\nCordialement,\r\nSami JAOUI,\r\nBénévole AC19 - Paris 15e', 3, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 --
 -- Index pour les tables déchargées
@@ -73,7 +74,7 @@ ALTER TABLE `ac19_ac19_messages`
 -- AUTO_INCREMENT pour la table `ac19_ac19_messages`
 --
 ALTER TABLE `ac19_ac19_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Contraintes pour les tables déchargées
