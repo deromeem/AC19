@@ -28,7 +28,7 @@ class AppAc19Web extends JApplicationCms
 		if ($email != ""){
 			$query->where('email = "'.$email.'"');
 		}
-		// echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
+		//echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
 		try {
 			$this->_db->setQuery($query);
 			return $this->_db->loadObjectList();
