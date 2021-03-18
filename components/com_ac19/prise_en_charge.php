@@ -1,23 +1,24 @@
 <?php
 defined('_JEXEC') or die;
 
-class AnnuaireControllerLivraison extends JControllerForm
+class Ac19ControllerPrise_en_charge extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
-	protected $view_item = 'form';
+	protected $view_item = 'form_pr';
 	
 	// précise la variable d'édition URL
-	protected $urlVar = 'a.id';
+	protected $urlVar = 'pr.id';
 	
 	public function add()
 	{
 		if (!parent::add())
 		{
+			// redirige à la page de retour
 			$this->setRedirect($this->getReturnPage());
 		}
 	}
 
-	public function edit($key = null, $urlVar = 'a_id')
+	public function edit($key = null, $urlVar = 'pr_id')
 	{
 		$result = parent::edit($key, $urlVar);
 		if (!$result)
@@ -27,7 +28,7 @@ class AnnuaireControllerLivraison extends JControllerForm
 		return $result;
 	}
 
-	public function save($key = null, $urlVar = 'a_id')
+	public function save($key = null, $urlVar = 'pr_id')
 	{
 		$result = parent::save($key, $urlVar);
 		if ($result)
@@ -37,7 +38,7 @@ class AnnuaireControllerLivraison extends JControllerForm
 		return $result;
 	}
 
-	public function cancel($key = 'a_id')
+	public function cancel($key = 'pr_id')
 	{
 		parent::cancel($key);
 		$this->setRedirect($this->getReturnPage());
@@ -46,6 +47,7 @@ class AnnuaireControllerLivraison extends JControllerForm
 	protected function getReturnPage()
 	{
 		// $return = $this->input->get('return', null, 'base64');
+
 		// if (empty($return) || !JUri::isInternal(base64_decode($return)))
 		// {
 			// return JUri::base();
@@ -53,11 +55,11 @@ class AnnuaireControllerLivraison extends JControllerForm
 		// else
 		// {
 			// return base64_decode($return);
-		// }		
-		return JURI::base()."/index.php?option=com_annuaire&view=livraisons";		
+		// }
+		return JURI::base()."index.php/mon-profil";		
 	}
 
-	public function getModel($name = 'form', $prefix = '', $config = array('ignore_request' => true))
+	public function getModel($name = 'form_pr', $prefix = '', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
