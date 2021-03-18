@@ -19,7 +19,7 @@ $isAc19 = (in_array_any(array('12', '13', '14', '15'), $user->groups));
 			<h2><?php echo JText::_('COM_AC19_CATALOGUE'); ?></h2>
 		</div>
 		<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_u&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_ca&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
 		</div>	
 	</div>
 	<div>
@@ -46,7 +46,7 @@ $isAc19 = (in_array_any(array('12', '13', '14', '15'), $user->groups));
 						<span class="label"><?php echo JText::_('COM_AC19_PARTENAIRES_ID'); ?></span>
 					</td>
 					<td width="80%">
-						<?php echo $this->item->id ?>
+						<?php echo $this->item->partenaires_id ?>
 					</td>
 				</tr>
 			</tbody>

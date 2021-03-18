@@ -43,7 +43,7 @@ class Ac19ModelCatalogue extends JModelItem
 			$query = $db->getQuery(true);
 			$query->select('ca.id, ca.titre, ca.description, ca.partenaires_id, ca.hits, ca.modified');
 			$query->from('#__ac19_catalogues AS ca');
-			$query->where('ca.id = ' . (int) $id);
+			$query->where('ca.id = ' . (int) $pk);
 			$db->setQuery($query);
 			$data = $db->loadObject();
 			$this->_item[$pk] = $data;
