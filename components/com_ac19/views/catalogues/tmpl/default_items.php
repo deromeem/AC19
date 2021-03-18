@@ -30,7 +30,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<i class="icon-search"></i></button>
 		</div>
 		<div class="btn-group pull-left">
-			<a href="<?php echo JRoute::_('index.php?option=com_annuaire&view=form_c&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_c&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>	
 		<div class="btn-group pull-right">
 			<label for="limit" class="element-invisible"><?php echo JText::_('JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC');?></label>
@@ -42,21 +42,21 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<table class="table table-striped" id="articleList">
 		<thead>
 			<tr>
-				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_ANNUAIRE_CONTACTS_NOM'), 'titre', $listDirn, $listOrder) ?>
+				<th  class="title">
+					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_CATALOGUES_TITRE'), 'titre', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_ANNUAIRE_CONTACTS_PRENOM'), 'description', $listDirn, $listOrder) ?>
+					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_CATALOGUES_DESCRIPTION'), 'description', $listDirn, $listOrder) ?>
 				</th>
 				<!-- <th class="title">Publié</th> -->
 				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_ANNUAIRE_CONTACTS_TYPECONTACT'), 'dateDebut', $listDirn, $listOrder) ?>
+					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_CATALOGUES_DATE_DEBUT'), 'dateDebut', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_ANNUAIRE_CONTACTS_ENTREPRISE'), 'dateFin', $listDirn, $listOrder) ?>
+					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_CATALOGUES_DATE_FIN'), 'dateFin', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_ANNUAIRE_CONTACTS_ENTREPRISE'), 'partenaires_id', $listDirn, $listOrder) ?>
+					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_CATALOGUES_PARTENAIRE'), 'partenaire', $listDirn, $listOrder) ?>
 				</th>
 				<!-- <th class="title"><?php echo JHtml::_('grid.sort', 'Date', 'created', $listDirn, $listOrder) ?></th> -->
 			</tr>
@@ -71,8 +71,13 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<td>
 						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->description ?></a>
 					</td>
-					<!-- <td><?php echo JHtml::_('jgrid.published', $item->published, $i, 'partenaires_id.', true); ?></td> -->
-					<td><?php echo $item->partenaire ?></td>
+					<td>
+						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->dateDebut ?></a>
+					</td>
+					<td>
+						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->dateFin ?></a>
+					</td>
+					<!-- <td><?php echo JHtml::_('jgrid.published', $item->published, $i, 'partenaire.', true); ?></td> -->
 					<td><?php echo $item->partenaire ?></td>
 					<!-- <td><?php echo JHtml::_('date', $item->created, 'j F Y'); ?></td> -->
 				</tr>			
