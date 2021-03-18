@@ -43,7 +43,7 @@ class Ac19ModelCommande extends JModelItem
 			$query = $db->getQuery(true);
 			$query->select('c.id, c.numCde, c.dateHeureCde, c.dateHeureLivr, c.prixTotal, c.refPaiement, c.hits, c.modified');
 			$query->from('#__ac19_commandes AS c');
-			$query->where('c.id = ' . (int) $id);
+			$query->where('c.id = ' . (int) $pk);
 			$db->setQuery($query);
 			$data = $db->loadObject();
 			$this->_item[$pk] = $data;
