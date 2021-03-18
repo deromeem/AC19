@@ -12,6 +12,7 @@ class AppAc19Web extends JApplicationCms
 		parent::__construct();
 		require_once JPATH_CONFIGURATION.'/configuration.php';
 	}
+	
 
 	private function LoadViewResult($task, $id = 0, $did = 0, $email = "")
 	{
@@ -28,7 +29,7 @@ class AppAc19Web extends JApplicationCms
 		if ($email != ""){
 			$query->where('email = "'.$email.'"');
 		}
-		// echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
+		//echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
 		try {
 			$this->_db->setQuery($query);
 			return $this->_db->loadObjectList();
