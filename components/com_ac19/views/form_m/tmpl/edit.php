@@ -19,7 +19,7 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 		Joomla.submitbutton = function(task)
 		{
 			// si bouton 'Annuler' ou si les champs du formulaire sont valides alors on envoie le formulaire
-			if (task == 'commande.cancel' || document.formvalidator.isValid(document.getElementById('adminForm')))
+			if (task == 'message.cancel' || document.formvalidator.isValid(document.getElementById('adminForm')))
 			{
 				Joomla.submitform(task);
 			}
@@ -27,21 +27,21 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 	</script>
 
 	<div class="edit item-page">
-		<form action="<?php echo JRoute::_('index.php?option=com_ac19&c_id=' . (int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate form-vertical">
+		<form action="<?php echo JRoute::_('index.php?option=com_ac19&a_id=' . (int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate form-vertical">
 			
 			<div class="form-inline form-inline-header">
 				<div class="btn-group pull-left">
 					<?php $isNew = ($this->item->id == 0); ?>
-					<h2><?php echo JText::_('COM_AC19_COMMANDE')?></h2>
+					<h2><?php echo JText::_('COM_AC19_CONTACT')." ".($isNew ? JText::_('COM_AC19_ADD_PAR'): JText::_('COM_AC19_MODIF_PAR')); ?></h2>
 				</div>
 				<div class="btn-toolbar">
 					<div class="btn-group pull-right">
-						<button type="button" class="btn" onclick="Joomla.submitbutton('commande.cancel')">
+						<button type="button" class="btn" onclick="Joomla.submitbutton('message.cancel')">
 							<span class="icon-cancel"></span>
 						</button>
 					</div>
 					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('commande.save')">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('message.save')">
 							<span class="icon-ok"></span>
 						</button>
 					</div>
@@ -51,68 +51,52 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 
 			<fieldset>
 				<ul class="nav nav-tabs">
-					<li><a href="#commande" data-toggle="tab"><?php echo JText::_('COM_AC19_COMMANDE'); ?></a></li>
-					<li><a href="#avance" data-toggle="tab"><?php echo JText::_('COM_AC19_ADVANCED'); ?></a></li> 
+					<li><a href="#message" data-toggle="tab"><?php echo JText::_('COM_AC19_MESSAGE'); ?></a></li>
+					<li><a href="#avance" data-toggle="tab"><?php echo JText::_('COM_AC19_ADVANCED'); ?></a></li>
 					<li><a href="#commentaire" data-toggle="tab"><?php echo JText::_('COM_AC19_COMMENT'); ?></a></li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="commande">
+					<div class="tab-pane active" id="message">
 						<table class="table">
 							<tbody>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('numCde'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('date'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('numCde'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('date'); ?></div>
 									</td>
 								</tr>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('dateHeureCde'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('objet'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('dateHeureCde'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('objet'); ?></div>
 									</td>
 								</tr>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('dateHeureLivr'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('contenu'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('dateHeureLivr'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('contenu'); ?></div>
 									</td>
 								</tr>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('prixTotal'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('utilisateurs_aut__id'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('prixTotal'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('utilisateurs_aut_id'); ?></div>
 									</td>
 								</tr>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('particuliers_id'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('utilisateurs_dest_id'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('particuliers_id'); ?></div>
-									</td>
-								</tr>
-								<tr>
-									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('magasins_id'); ?></div>
-									</td>
-									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('magasins_id'); ?></div>
-									</td>
-								</tr>
-								<tr>
-									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('etat_cdes_id'); ?></div>
-									</td>
-									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('etat_cdes_id'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('utilisateurs_dest_id'); ?></div>
 									</td>
 								</tr>
 							</tbody>
@@ -120,11 +104,6 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 					</div>
 					
 					<div class="tab-pane" id="avance">
-						<table class="table">
-							<tbody>
-							</tbody>
-						</table>				
-
 						<input type="hidden" name="task" value="" />
 						<input type="hidden" name="return" value="<?php echo $this->return_page; ?>" />
 					</div>
