@@ -2,7 +2,7 @@
 defined('_JEXEC') or die('Restricted access');
 ?>
 
-<h1>Livraisons de l'annuaire</h1>
+<h1>Contacts de l'annuaire</h1>
 
 <form action="<?php echo htmlspecialchars(JFactory::getURI()->toString()); ?>" method="post" name="adminForm" id="adminForm">
 
@@ -18,9 +18,8 @@ defined('_JEXEC') or die('Restricted access');
 		<tbody>
 			<?php foreach($this->tickets as $i => $item) : ?>
 			<tr>
-				<td><?php echo $item->nom ?></td>
-				<td><?php echo $item->prenom ?></td>
-				<td><?php echo $item->email ?></td>
+				<td><?php echo $item->titre ?></td>
+				<td><?php echo $item->description ?></td>
 			</tr>			
 			<?php endforeach; ?>
 		</tbody>
