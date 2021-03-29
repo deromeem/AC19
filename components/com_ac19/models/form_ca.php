@@ -16,7 +16,7 @@ class Ac19ModelForm_ca extends Ac19ModelCatalogue
 
 		// Charge l'état depuis l'URL
 		$pk = $app->input->getInt('id');
-		$this->setState('catalogues.id', $pk);
+		$this->setState('catalogue.id', $pk);
 		
 		$this->setState($this->_context.'id', $pk);
 
@@ -28,7 +28,7 @@ class Ac19ModelForm_ca extends Ac19ModelCatalogue
 	
 	public function getItem($itemId = null)
 	{
-		$itemId = (int) (!empty($itemId)) ? $itemId : $this->getState('catalogues.id');
+		$itemId = (int) (!empty($itemId)) ? $itemId : $this->getState('catalogue.id');
 		// echo "Frontend itemId=".$itemId;   // TEST/DEBUG
 
 		// Obtient une instance de la ligne

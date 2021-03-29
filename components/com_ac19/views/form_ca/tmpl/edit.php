@@ -27,7 +27,7 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 	</script>
 
 	<div class="edit item-page">
-		<form action="<?php echo JRoute::_('index.php?option=com_ac19&a_id=' . (int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate form-vertical">
+		<form action="<?php echo JRoute::_('index.php?option=com_ac19&ca_id=' . (int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate form-vertical">
 			
 			<div class="form-inline form-inline-header">
 				<div class="btn-group pull-left">

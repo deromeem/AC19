@@ -56,7 +56,7 @@ class Ac19ControllerCatalogue extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."index.php/mon-profil";		
+		return JURI::base()."/index.php?option=com_ac19&view=catalogues";		
 	}
 
 	public function getModel($titre = 'form_ca', $prefix = '', $config = array('ignore_request' => true))
