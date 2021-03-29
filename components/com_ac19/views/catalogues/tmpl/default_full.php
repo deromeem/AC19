@@ -18,9 +18,8 @@ defined('_JEXEC') or die('Restricted access');
 		<tbody>
 			<?php foreach($this->tickets as $i => $item) : ?>
 			<tr>
-				<td><?php echo $item->nom ?></td>
-				<td><?php echo $item->prenom ?></td>
-				<td><?php echo $item->email ?></td>
+				<td><?php echo $item->titre ?></td>
+				<td><?php echo $item->description ?></td>
 			</tr>			
 			<?php endforeach; ?>
 		</tbody>

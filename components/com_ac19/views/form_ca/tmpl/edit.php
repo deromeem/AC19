@@ -32,7 +32,7 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 			<div class="form-inline form-inline-header">
 				<div class="btn-group pull-left">
 					<?php $isNew = ($this->item->id == 0); ?>
-					<h2><?php echo JText::_('COM_AC19_CATALOGUE')." ".($isNew ? JText::_('COM_AC19_ADD_PAR'): JText::_('COM_AC19_MODIF_PAR')); ?></h2>
+					<h2><?php echo JText::_('COM_AC19_CATALOGUE')." ".($isNew ? JText::_('COM_AC19_ADD'): JText::_('COM_AC19_MODIF')); ?></h2>
 				</div>
 				<div class="btn-toolbar">
 					<div class="btn-group pull-right">

@@ -12,6 +12,7 @@ class AppAc19Web extends JApplicationCms
 		parent::__construct();
 		require_once JPATH_CONFIGURATION.'/configuration.php';
 	}
+	
 
 	private function LoadViewResult($task, $id = 0, $did = 0, $email = "")
 	{

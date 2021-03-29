@@ -1,10 +1,10 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class Ac19ModelCatalogue extends JModelItem
+class Ac19ModelPrise_en_charge extends JModelItem
 {
 	protected $_item = null;
-	protected $_context = 'com_ac19.catalogue';
+	protected $_context = 'com_ac19.prise_en_charge';
 
 	protected function populateState()
 	{
@@ -13,7 +13,7 @@ class Ac19ModelCatalogue extends JModelItem
 		// Charge et mémorise l'état (state) de l'id depuis le contexte
 		$pk = $app->input->getInt('id');
 		$this->setState($this->_context.'.id', $pk);
-		// $this->setState('catalogue.id', $pk);
+		// $this->setState('prise_en_charge.id', $pk);
 	}
 
 	public function getItem($pk = null)
@@ -22,16 +22,16 @@ class Ac19ModelCatalogue extends JModelItem
 		$pk = (!empty($pk)) ? $pk : (int) $this->getState($this->_context.'.id');
 		
 		if (empty($pk)) {
-			// Si pas de id donné : recherche si un catalogue Joomla est connecté :
+			// Si pas de id donné : recherche si un utilisateur Joomla est connecté :
 			$user = JFactory::getUser();
 			if (isset($user)) {
-				// Un catalogue est connecté : recherche de ses données
-				$id = $user->id;
+				// Un utilisateur est connecté : recherche de ses données
+				$email = $user->email;
 				$db = $this->getDbo();
 				$query = $db->getQuery(true);
-				$query->select('ca.id as id, ca.titre, ca.description, ca.partenaires_id, ca.hits, ca.modified');
-				$query->from('#__ac19_catalogues AS ca');
-				$query->where('ca.id = ' . $id);
+				$query->select('pr.id as id, pr.nom, pr.prenom, pr.email, pr.tel, pr.hits, pr.modified');
+				$query->from('#__ac19_prise_en_charges AS pr');
+				$query->where('pr.email = ' . $email);
 				$db->setQuery($query);
 				$data = $db->loadObject();
 				$pk = $data->id;
@@ -41,9 +41,9 @@ class Ac19ModelCatalogue extends JModelItem
 			// Si pas de données chargées pour cet id
 			$db = $this->getDbo();
 			$query = $db->getQuery(true);
-			$query->select('ca.id, ca.titre, ca.description, ca.partenaires_id, ca.hits, ca.modified');
-			$query->from('#__ac19_catalogues AS ca');
-			$query->where('ca.id = ' . (int) $pk);
+			$query->select('pr.id, pr.nom, pr.prenom, pr.email, pr.tel, pr.hits, pr.modified');
+			$query->from('#__ac19_prise_en_charges AS pr');
+			$query->where('pr.id = ' . (int) $id);
 			$db->setQuery($query);
 			$data = $db->loadObject();
 			$this->_item[$pk] = $data;

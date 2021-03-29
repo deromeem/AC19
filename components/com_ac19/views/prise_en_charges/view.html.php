@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class AnnuaireViewLivraison extends JViewLegacy
+class Ac19ViewLivraison extends JViewLegacy
 {
 	protected $item;
 	

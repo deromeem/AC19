@@ -8,12 +8,12 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 ?>
 
 <?php if (!$isAdmin) : ?>
-	<?php echo JError::raiseWarning( 100, JText::_('COM_ANNUAIRE_RESTRICTED_ACCESS') ); ?>
+	<?php echo JError::raiseWarning( 100, JText::_('COM_AC19_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 
-	<h2><?php echo JText::_('COM_ANNUAIRE_OPTIONS')." : ".JText::_('COM_ANNUAIRE_CONTACTS')." - "; ?>
+	<h2><?php echo JText::_('COM_AC19_OPTIONS')." : - "; ?>
 		<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=catalogues'); ?>">
-			<?php echo JText::_('COM_ANNUAIRE_CATALOGUES'); ?>
+			<?php echo JText::_('COM_AC19_CATALOGUES'); ?>
 		</a>
 	</h2>
 
