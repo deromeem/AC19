@@ -43,12 +43,12 @@ class Ac19ModelMessage extends JModelItem
 			$query = $db->getQuery(true);
 			$query->select('m.id, m.date, m.objet, m.contenu, m.hits, m.modified');
 			$query->from('#__ac19_messages AS m');
-			$query->where('u.id = ' . (int) $id);
+			$query->where('m.id = ' . (int) $pk);
 			$db->setQuery($query);
 			$data = $db->loadObject();
 			$this->_item[$pk] = $data;
 		}
-		// echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
+		 //echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
   		return $this->_item[$pk];
 	}
 }
