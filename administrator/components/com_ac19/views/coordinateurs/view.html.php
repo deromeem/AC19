@@ -73,9 +73,9 @@ class Ac19ViewCoordinateurs extends JViewLegacy
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'nom' => JText::_('COM_AC19_UTILISATEURS_NOM'),
-			'prenom' => JText::_('COM_AC19_UTILISATEURS_PRENOM'),
-			'c.email' => JText::_('COM_AC19_COORDINATEURS_EMAIL'),
+			'mail' => JText::_('COM_AC19_COORDINATEURS_EMAIL'),
+			'c.published' => JText::_('JSTATUS'),
+			'c.modified' => JText::_('JDATE'),
 			'c.id' => "Id"
 		);
 	}  
