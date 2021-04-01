@@ -1,13 +1,13 @@
 <?php
 defined('_JEXEC') or die;
 
-class Ac19ControllerCatalogue extends JControllerForm
+class Ac19ControllerInscription extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
-	protected $view_item = 'form_ca';
+	protected $view_item = 'form_i';
 	
 	// précise la variable d'édition URL
-	protected $urlVar = 'ca.id';
+	protected $urlVar = 'i.id';
 	
 	public function add()
 	{
@@ -18,7 +18,7 @@ class Ac19ControllerCatalogue extends JControllerForm
 		}
 	}
 
-	public function edit($key = null, $urlVar = 'ca_id')
+	public function edit($key = null, $urlVar = 'i_id')
 	{
 		$result = parent::edit($key, $urlVar);
 		if (!$result)
@@ -28,7 +28,7 @@ class Ac19ControllerCatalogue extends JControllerForm
 		return $result;
 	}
 
-	public function save($key = null, $urlVar = 'ca_id')
+	public function save($key = null, $urlVar = 'i_id')
 	{
 		$result = parent::save($key, $urlVar);
 		if ($result)
@@ -38,7 +38,7 @@ class Ac19ControllerCatalogue extends JControllerForm
 		return $result;
 	}
 
-	public function cancel($key = 'ca_id')
+	public function cancel($key = 'i_id')
 	{
 		parent::cancel($key);
 		$this->setRedirect($this->getReturnPage());
@@ -56,12 +56,12 @@ class Ac19ControllerCatalogue extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."/index.php?option=com_ac19&view=catalogues";		
+		return JURI::base()."index.php/mon-profil";		
 	}
 
-	public function getModel($titre = 'form_ca', $prefix = '', $config = array('ignore_request' => true))
+	public function getModel($name = 'form_i', $prefix = '', $config = array('ignore_request' => true))
 	{
-		$model = parent::getModel($titre, $prefix, $config);
+		$model = parent::getModel($name, $prefix, $config);
 		return $model;
 	}
 }
