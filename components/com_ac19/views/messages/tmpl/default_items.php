@@ -48,16 +48,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<th class="title">
 					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_MESSAGES_OBJET'), 'objet', $listDirn, $listOrder) ?>
 				</th>
-				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_MESSAGES_CONTENU'), 'contenu', $listDirn, $listOrder) ?>
-				</th>
 				<!-- <th class="title">Publié</th> -->
-				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_MESSAGES_TYPECONTACT'), 'typecontact', $listDirn, $listOrder) ?>
-				</th>
-				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_AC19_CONTACTS_ENTREPRISE'), 'entreprise', $listDirn, $listOrder) ?>
-				</th>
 				<!-- <th class="title"><?php echo JHtml::_('grid.sort', 'Date', 'created', $listDirn, $listOrder) ?></th> -->
 			</tr>
 		</thead>
@@ -72,8 +63,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->objet ?></a>
 					</td>
 					<!-- <td><?php echo JHtml::_('jgrid.published', $item->published, $i, 'entreprises.', true); ?></td> -->
-					<td><?php echo $item->typecontact ?></td>
-					<td><?php echo $item->entreprise ?></td>
 					<!-- <td><?php echo JHtml::_('date', $item->created, 'j F Y'); ?></td> -->
 				</tr>			
 			<?php endforeach; ?>
