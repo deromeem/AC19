@@ -68,26 +68,16 @@ class Ac19ViewPrise_en_charges extends JViewLegacy
 			'value', 'text', $this->state->get('filter.published'),true)
 		);
 
-		// ajoute le filtre spécifique pour les pays
-		// $this->pays = $this->get('Pays');
-		// $options3	= array();
-		// foreach ($this->pays as $pay) {
-		// 	$options3[]	= JHtml::_('select.option', $pay->id,  $pay->pays);
-		// }
-		// $this->pay = $options3;
-		// JHtmlSidebar::addFilter("- ".JText::_('COM_ANNUAIRE_PAYS_SELECT')." -", 'filter_pay',
-		// 	JHtml::_('select.options', $this->pay,
-		// 	'value', 'text', $this->state->get('filter.pay'))
-		// );
 	}
 
  	protected function getSortFields()
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'p.prise_en_charges' => JText::_('COM_AC19_PRISE_EN_CHARGES'),
 			'p.dateHeureDebut' => JText::_('COM_AC19_DATE_HEURE_DEBUT'),
 			'p.dateHeureFin' => JText::_('COM_AC19_DATE_HEURE_FIN'),
+			'numCde' => JText::_('COM_AC19_PRISE_EN_CHARGES_COMMANDE'),
+			'email' => JText::_('COM_AC19_PRISE_EN_CHARGES_BENEVOLE'),
 			'p.id' => "Id"
 		);
 	}  

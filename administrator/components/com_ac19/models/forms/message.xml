@@ -13,16 +13,10 @@
 		<field name="objet" type="text" label="COM_AC19_MESSAGES_OBJET"
             description="COM_AC19_MESSAGES_OBJET"
             size="40" class="input-large-text" default="" required="true"
-        />   
-		<field name="alias" type="text"
-			label="JFIELD_ALIAS_LABEL"
-			description="JFIELD_ALIAS_DESC"
-			hint="JFIELD_ALIAS_PLACEHOLDER"
-			class="inputbox" size="45"
-		/>
-        <field name="contenu" type="text" label="COM_AC19_MESSAGES_CONTENU"
+        />
+		<field name="contenu" type="editor" label="COM_AC19_MESSAGES_CONTENU"
             description="COM_AC19_MESSAGES_CONTENU"
-            size="40" class="input-xxlarge" default="" required="true"
+            size="400" class="input-xxlarge input-large-text" default="" required="true"
         />  
         <field name="utilisateurs_aut_id" type="sql" label="COM_AC19_MESSAGES_AUTEUR"
             description="COM_AC19_MESSAGES_AUTEUR"
@@ -33,7 +27,13 @@
             description="COM_AC19_MESSAGES_DESTINATAIRE"
             query="SELECT id, nom FROM #__ac19_utilisateurs ORDER BY nom"
             key_field="id" value_field="nom" required="false"
-        />  
+        />     
+		<field name="alias" type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+			class="inputbox" size="45"
+		/>
         <field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"

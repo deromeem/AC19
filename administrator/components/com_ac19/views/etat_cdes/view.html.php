@@ -43,7 +43,7 @@ class Ac19ViewEtat_cdes extends JViewLegacy
 	protected function addToolBar() 
 	{
 		// affiche le titre de la page
-		JToolBarHelper::title(JText::_('COM_AC19_ETAT_CDES')." : ".JText::_('COM_AC19_UTILISATEURS'));
+		JToolBarHelper::title(JText::_('COM_AC19_OPTIONS')." : ".JText::_('COM_AC19_ETAT_CDES'));
 		
 		// affiche les boutons d'action
 		JToolBarHelper::addNew('etat_cde.add');
@@ -85,9 +85,7 @@ class Ac19ViewEtat_cdes extends JViewLegacy
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'e.etat_cdes' => JText::_('COM_AC19_ETAT_CDES'),
-			'e.dateHeureDebut' => JText::_('COM_AC19_DATE_HEURE_DEBUT'),
-			'e.dateHeureFin' => JText::_('COM_AC19_DATE_HEURE_FIN'),
+			'e.etatCde' => JText::_('COM_AC19_ETAT_CDES_ETAT_CDE'),
 			'e.id' => "Id"
 		);
 	}  

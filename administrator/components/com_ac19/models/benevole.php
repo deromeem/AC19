@@ -59,7 +59,7 @@ class Ac19ModelBenevole extends JModelAdmin
 		$table->alias = JApplication::stringURLSafe($table->alias);
 		if (empty($table->alias))
 		{
-			$table->alias = JApplication::stringURLSafe($table->nom);
+			$table->alias = JApplication::stringURLSafe($table->email);
 		}
 	}
 }

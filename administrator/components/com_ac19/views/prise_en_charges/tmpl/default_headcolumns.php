@@ -10,27 +10,27 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			<?php echo JHtml::_('grid.checkall'); ?>
         </th>      
 		<th width="5%" class="nowrap center">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_PRISE_EN_CHARGES_COMMANDE', 'c.numCde', $listDirn, $listOrder) ?>
-        </th>
-		<th width="5%" class="nowrap center">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_PRISE_EN_CHARGES_BENEVOLE', 'b.email', $listDirn, $listOrder) ?>
-        </th>
-        <th width="2%" class="nowrap center">
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_DEBUT', 'p.dateHeureDebut', $listDirn, $listOrder) ?>
         </th>
-        <th width="5%" class="nowrap center">
+		<th width="5%" class="nowrap center">
 			<?php echo JHtml::_('grid.sort', 'COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_FIN', 'p.dateHeureFin', $listDirn, $listOrder) ?>
         </th>
+        <th width="2%" class="nowrap center">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_PRISE_EN_CHARGES_COMMANDE', 'numCde', $listDirn, $listOrder) ?>
+        </th>
+        <th width="5%" class="nowrap center">
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_PRISE_EN_CHARGES_BENEVOLE', 'email', $listDirn, $listOrder) ?>
+        </th>
         <th width="5%" style="min-width:55px" class="nowrap center hidden-phone">
-			<?php echo JHtml::_('grid.sort', 'Publié', 'e.published', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'Publié', 'p.published', $listDirn, $listOrder) ?>
         </th>
         <th width="10%" style="min-width:120px" class="nowrap center hidden-tablet hidden-phone">
-			<?php echo JHtml::_('grid.sort', 'Date de modification', 'e.modified', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'Date de modification', 'p.modified', $listDirn, $listOrder) ?>
         </th>
 		<th width="5%" class="nowrap center hidden-tablet hidden-phone">
-			<?php echo JHtml::_('grid.sort', 'JGLOBAL_HITS', 'e.hits', $listDirn, $listOrder); ?>
+			<?php echo JHtml::_('grid.sort', 'JGLOBAL_HITS', 'p.hits', $listDirn, $listOrder); ?>
 		</th>
 		<th width="5%" class="nowrap center hidden-phone">
-			<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'e.id', $listDirn, $listOrder); ?>
+			<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'p.id', $listDirn, $listOrder); ?>
 		</th>
 	</tr>
