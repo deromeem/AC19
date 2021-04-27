@@ -7,7 +7,8 @@ $user = JFactory::getUser();               		// gets current user object
 function in_array_any($needles, $haystack) {
 	return (bool)array_intersect($needles, $haystack);
 	}
-$isAc19 = (in_array_any(array('12', '13', '14', '15'), $user->groups));
+$isAc19 = (in_array_any(array('10', '11', '12', '13'), $user->groups)); // Utilisateurs AC19
+$isAc19Partenaire= (in_array('12', $user->groups)); 
 ?>
 
 
@@ -18,9 +19,11 @@ $isAc19 = (in_array_any(array('12', '13', '14', '15'), $user->groups));
 		<div class="btn-group pull-left">
 			<h2><?php echo JText::_('COM_AC19_CATALOGUE'); ?></h2>
 		</div>
-		<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_ca&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
-		</div>	
+		<?php if ($isAc19Partenaire): ?>
+			<div class="btn-group pull-right">
+				<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_ca&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
+			</div>
+		<?php endif; ?>	
 	</div>
 	<div>
 		<table class="table">
