@@ -5,24 +5,19 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="dateHeureDebut" type="text" label="COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_DEBUT"
-            description="COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_DEBUT"
+        <field name="email" type="sql" label="COM_AC19_BENEVOLES_EMAIL"
+            description="COM_AC19_BENEVOLES_EMAIL"
+            query="SELECT id, email FROM #__ac19_utilisateurs ORDER BY email"
+            key_field="id" value_field="email" required="false"
+        />
+		<field name="latitude" type="text" label="COM_AC19_BENEVOLES_LATITUDE"
+            description="COM_AC19_BENEVOLES_LATITUDE"
             size="40" class="input-large-text" default="" required="true"
         />   
-		<field name="dateHeureFin" type="text" label="COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_FIN"
-            description="COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_FIN"
+		<field name="longitude" type="text" label="COM_AC19_BENEVOLES_LONGITUDE"
+            description="COM_AC19_BENEVOLES_LONGITUDE"
             size="40" class="input-large-text" default="" required="true"
-        />
-		<field name="commandes_id" type="sql" label="COM_AC19_PRISE_EN_CHARGES_COMMANDE"
-            description="COM_AC19_PRISE_EN_CHARGES_COMMANDE"
-            query="SELECT id, numCde FROM #__ac19_commandes ORDER BY numCde"
-            key_field="id" value_field="numCde" required="false"
-        /> 
-		<field name="benevoles_id" type="sql" label="COM_AC19_PRISE_EN_CHARGES_BENEVOLE"
-            description="COM_AC19_PRISE_EN_CHARGES_BENEVOLE"
-            query="SELECT id, email FROM #__ac19_benevoles ORDER BY email"
-            key_field="id" value_field="email" required="false"
-        />      
+        />		   
 		<field name="alias" type="text"
 			label="JFIELD_ALIAS_LABEL"
 			description="JFIELD_ALIAS_DESC"

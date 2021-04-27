@@ -1,16 +1,16 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class Ac19ModelUtilisateur extends JModelAdmin
+class Ac19ModelEtat_cde extends JModelAdmin
 {
 	protected $_compo = 'com_ac19';
-	protected $_context = 'utilisateur';
-	public $typeAlias = 'com_ac19.utilisateur';
+	protected $_context = 'etat_cde';
+	public $typeAlias = 'com_ac19.etat_cde';
 	
 	// Surcharges des méthodes de la classe mère pour :
 	
 	// 1) définir la table de soutien à utiliser
-	public function getTable($type = 'Utilisateur', $prefix = 'Ac19Table', $config = array()) 
+	public function getTable($type = 'Etat_cde', $prefix = 'Ac19Table', $config = array()) 
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -59,7 +59,7 @@ class Ac19ModelUtilisateur extends JModelAdmin
 		$table->alias = JApplication::stringURLSafe($table->alias);
 		if (empty($table->alias))
 		{
-			$table->alias = JApplication::stringURLSafe($table->nom);
+			$table->alias = JApplication::stringURLSafe($table->etatCde);
 		}
 	}
 }
