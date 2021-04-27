@@ -10,7 +10,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			<?php echo JHtml::_('grid.checkall'); ?>
         </th>      
 		<th width="5%" class="nowrap center">
-			<?php echo JHtml::_('grid.sort', 'COM_AC19_ETAT_CDES_ETAT_CDE', 'c.etat_cde', $listDirn, $listOrder) ?>
+			<?php echo JHtml::_('grid.sort', 'COM_AC19_ETAT_CDES_ETAT_CDE', 'e.etatCde', $listDirn, $listOrder) ?>
         </th>
         <th width="5%" style="min-width:55px" class="nowrap center hidden-phone">
 			<?php echo JHtml::_('grid.sort', 'Publié', 'e.published', $listDirn, $listOrder) ?>

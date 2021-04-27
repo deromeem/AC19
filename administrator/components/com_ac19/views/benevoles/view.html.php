@@ -16,10 +16,10 @@ class Ac19ViewBenevoles extends JViewLegacy
 		$this->listDirn	= $this->escape($this->state->get('list.direction'));			
 
 		// récupère les paramêtres du fichier de configuration config.xml
-		$params = JComponentHelper::getParams('com_annuaire');
-		$this->paramDescShow = $params->get('jannuaire_show_desc', 0);
-		$this->paramDescSize = $params->get('jannuaire_size_desc', 70);
-		$this->paramDateFmt = $params->get('jannuaire_date_fmt', "d F Y");
+		$params = JComponentHelper::getParams('com_ac19');
+		$this->paramDescShow = $params->get('jac19_show_desc', 0);
+		$this->paramDescSize = $params->get('jac19_size_desc', 70);
+		$this->paramDateFmt = $params->get('jac19_date_fmt', "d F Y");
 
 		// affiche les erreurs éventuellement retournées
 		if (count($errors = $this->get('Errors'))) 
@@ -31,7 +31,7 @@ class Ac19ViewBenevoles extends JViewLegacy
 		// ajoute la toolbar contenant les boutons d'actions
 		$this->addToolBar();
 		// invoque la méthode addSubmenu du fichier de soutien (helper)
-		UtilisateurHelper::addSubmenu('benevoles');
+		utilisateurHelper::addSubmenu('benevoles');
 		// prépare et affiche la sidebar à gauche de la liste
 		$this->prepareSideBar();
 		$this->sidebar = JHtmlSidebar::render();
@@ -43,12 +43,12 @@ class Ac19ViewBenevoles extends JViewLegacy
 	protected function addToolBar() 
 	{
 		// affiche le titre de la page
-		JToolBarHelper::title(JText::_('COM_AC19_BENEVOLES')." : ".JText::_('COM_AC19_UTILISATEURS'));
+		JToolBarHelper::title(JText::_('COM_AC19_OPTIONS')." : ".JText::_('COM_AC19_BENEVOLES'));
 		
 		// affiche les boutons d'action
 		JToolBarHelper::addNew('benevole.add');
 		JToolBarHelper::editList('benevole.edit');
-		JToolBarHelper::deleteList('Êtes vous sur ?', 'benevoles.delete');		
+		JToolBarHelper::deleteList('COM_AC19_DELETE_CONFIRM', 'benevoles.delete');		
 		JToolbarHelper::publish('benevoles.publish', 'JTOOLBAR_PUBLISH', true);
 		JToolbarHelper::unpublish('benevoles.unpublish', 'JTOOLBAR_UNPUBLISH', true);
 		JToolbarHelper::archiveList('benevoles.archive');
@@ -62,33 +62,20 @@ class Ac19ViewBenevoles extends JViewLegacy
 		// definit l'action du formulaire sidebar
 		JHtmlSidebar::setAction('index.php?option=com_ac19');
 		
-		// ajoute le filtre standard des statuts dans le bloc des sous-menus
+		//ajoute le filtre standard des statuts dans le bloc des sous-menus
 		JHtmlSidebar::addFilter( JText::_('JOPTION_SELECT_PUBLISHED'), 'filter_published',
 			JHtml::_('select.options', JHtml::_('jgrid.publishedOptions'),
 			'value', 'text', $this->state->get('filter.published'),true)
 		);
-
-		// ajoute le filtre spécifique pour les pays
-		// $this->pays = $this->get('Pays');
-		// $options3	= array();
-		// foreach ($this->pays as $pay) {
-		// 	$options3[]	= JHtml::_('select.option', $pay->id,  $pay->pays);
-		// }
-		// $this->pay = $options3;
-		// JHtmlSidebar::addFilter("- ".JText::_('COM_ANNUAIRE_PAYS_SELECT')." -", 'filter_pay',
-		// 	JHtml::_('select.options', $this->pay,
-		// 	'value', 'text', $this->state->get('filter.pay'))
-		// );
 	}
 
  	protected function getSortFields()
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'b.benevoles' => JText::_('COM_AC19_BENEVOLES'),
-			'b.email' => JText::_('COM_AC19_EMAIL'),
-			'b.latitude' => JText::_('COM_AC19_LATITUDE'),
-			'b.longitude' => JText::_('COM_AC19_LONGITUDE'),
+			'courriel' => JText::_('COM_AC19_BENEVOLES_EMAIL'),
+			'b.latitude' => JText::_('COM_AC19_BENEVOLES_LATITUDE'),
+			'b.longitude' => JText::_('COM_AC19_BENEVOLES_LONGITUDE'),
 			'b.id' => "Id"
 		);
 	}  

@@ -20,15 +20,9 @@ if ($saveOrder)
 		<td class="wrap has-context">
 			<div class="pull-left">
 				<a href="<?php echo JRoute::_('index.php?option=com_ac19&task=coordinateur.edit&id='.(int) $item->id); ?>">
-					<?php echo $this->escape($item->nom); ?>
+					<?php echo $this->escape($item->mail); ?>
 				</a>
 			</div>
-		</td>
-		<td>
-			<?php echo $item->prenom; ?>
-		</td>
-		<td>
-			<?php echo $item->email; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'coordinateurs.', true); ?>

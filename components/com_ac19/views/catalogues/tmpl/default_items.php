@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die;
 
-$uriCompoDetail = JURI::base(true)."/index.php?option=com_ac19&view=catalogues&id=";
+$uriCompoDetail = JURI::base(true)."/index.php?option=com_ac19&view=catalogue&id=";
 
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
@@ -30,7 +30,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<i class="icon-search"></i></button>
 		</div>
 		<div class="btn-group pull-left">
-			<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_c&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_ca&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>	
 		<div class="btn-group pull-right">
 			<label for="limit" class="element-invisible"><?php echo JText::_('JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC');?></label>
@@ -69,13 +69,13 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->titre ?></a>
 					</td>
 					<td>
-						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->description ?></a>
+						<?php echo $item->description ?>
 					</td>
 					<td>
-						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->dateDebut ?></a>
+						<?php echo $item->dateDebut ?>
 					</td>
 					<td>
-						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->dateFin ?></a>
+						<?php echo $item->dateFin ?>
 					</td>
 					<!-- <td><?php echo JHtml::_('jgrid.published', $item->published, $i, 'partenaire.', true); ?></td> -->
 					<td><?php echo $item->partenaire ?></td>

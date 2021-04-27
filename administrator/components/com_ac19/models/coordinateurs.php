@@ -10,9 +10,7 @@ class Ac19ModelCoordinateurs extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'c.id',
-				'nom', 'nom',
-				'prenom', 'prenom',
-				'email', 'c.email',
+				'mail', 'c.email',
 				'published', 'c.published',
 				'hits', 'c.hits',
 				'modified', 'c.modified'
@@ -28,7 +26,7 @@ class Ac19ModelCoordinateurs extends JModelList
 		$this->setState('filter.search', $search);
 
 		// parent::populateState('modified', 'desc');
-		parent::populateState('nom', 'ASC');
+		parent::populateState('c.email', 'ASC');
 	}
 	
 	protected function getListQuery()
@@ -39,7 +37,7 @@ class Ac19ModelCoordinateurs extends JModelList
 		$query->from('#__ac19_coordinateurs c');
 
 		// joint la table _users de Joomla
-		$query->select('u.nom AS nom, u.prenom AS prenom')->join('LEFT', '#__ac19_utilisateurs AS u ON c.email=u.email');
+		$query->select('u.email AS mail')->join('LEFT', '#__ac19_utilisateurs AS u ON c.email=u.id');
 
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
@@ -53,20 +51,18 @@ class Ac19ModelCoordinateurs extends JModelList
 				$search = $this->_db->Quote('%'.$this->_db->escape($search, true).'%');
 				// Compile les clauses de recherche
 				$searches	= array();
-				$searches[]	= 'nom LIKE '.$search;
-				$searches[]	= 'prenom LIKE '.$search;
-				$searches[]	= 'c.email LIKE '.$search;
+				$searches[]	= 'mail LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
 		}
 
 		// tri des colonnes
-		$orderCol = $this->state->get('list.ordering', 'nom');
+		$orderCol = $this->state->get('list.ordering', 'mail');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		// echo nl2br(str_replace('#__','egs_',$query));			// TEST/DEBUG
+		// echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
 		return $query;
 	}
 }

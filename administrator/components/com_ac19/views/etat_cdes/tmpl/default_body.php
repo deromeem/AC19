@@ -19,7 +19,7 @@ if ($saveOrder)
 		</td>
 		<td class="wrap center hidden-tablet hidden-phone has-context">
 			<div class="pull-left">
-				<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=prise_en_charges'.(int) $item->id); ?>">
+				<a href="<?php echo JRoute::_('index.php?option=com_ac19&task=etat_cde.edit&id='.(int) $item->id); ?>">
 					<?php echo $this->escape($item->etatCde); ?>
 				</a>
 			</div>
@@ -32,6 +32,9 @@ if ($saveOrder)
 		</td>
 		<td class="center hidden-tablet hidden-phone">
 			<?php echo (int) $item->hits; ?>
+		</td>
+		<td class="center hidden-tablet hidden-phone">
+			<?php echo (int) $item->id; ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

@@ -32,16 +32,16 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 			<div class="form-inline form-inline-header">
 				<div class="btn-group pull-left">
 					<?php $isNew = ($this->item->id == 0); ?>
-					<h2><?php echo JText::_('COM_AC19_COMMANDE')." ".($isNew ? JText::_('COM_AC19_ADD_PAR'): JText::_('COM_AC19_MODIF_PAR')); ?></h2>
+					<h2><?php echo JText::_('COM_AC19_COMMANDE')?></h2>
 				</div>
 				<div class="btn-toolbar">
 					<div class="btn-group pull-right">
-						<button type="button" class="btn" onclick="Joomla.submitbutton('contact.cancel')">
+						<button type="button" class="btn" onclick="Joomla.submitbutton('commande.cancel')">
 							<span class="icon-cancel"></span>
 						</button>
 					</div>
 					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('contact.save')">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('commande.save')">
 							<span class="icon-ok"></span>
 						</button>
 					</div>
@@ -51,12 +51,12 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 
 			<fieldset>
 				<ul class="nav nav-tabs">
-					<li><a href="#contact" data-toggle="tab"><?php echo JText::_('COM_AC19_COMMANDE'); ?></a></li>
-					<li><a href="#avance" data-toggle="tab"><?php echo JText::_('COM_AC19_ADVANCED'); ?></a></li>
+					<li><a href="#commande" data-toggle="tab"><?php echo JText::_('COM_AC19_COMMANDE'); ?></a></li>
+					<li><a href="#avance" data-toggle="tab"><?php echo JText::_('COM_AC19_ADVANCED'); ?></a></li> 
 					<li><a href="#commentaire" data-toggle="tab"><?php echo JText::_('COM_AC19_COMMENT'); ?></a></li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="contact">
+					<div class="tab-pane active" id="commande">
 						<table class="table">
 							<tbody>
 								<tr>
