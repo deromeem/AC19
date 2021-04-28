@@ -1,2 +1,3 @@
 /administrator/logs/*
 .idea
+administrator/logs/error.php
