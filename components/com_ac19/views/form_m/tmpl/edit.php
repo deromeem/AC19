@@ -32,7 +32,7 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 			<div class="form-inline form-inline-header">
 				<div class="btn-group pull-left">
 					<?php $isNew = ($this->item->id == 0); ?>
-					<h2><?php echo JText::_('COM_AC19_CONTACT')." ".($isNew ? JText::_('COM_AC19_ADD_PAR'): JText::_('COM_AC19_MODIF_PAR')); ?></h2>
+					<h2><?php echo JText::_('COM_AC19_MESSAGES_NOUVEAU')?></h2>
 				</div>
 				<div class="btn-toolbar">
 					<div class="btn-group pull-right">
@@ -50,11 +50,6 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 			<div class="clearfix"> </div>
 
 			<fieldset>
-				<ul class="nav nav-tabs">
-					<li><a href="#message" data-toggle="tab"><?php echo JText::_('COM_AC19_MESSAGE'); ?></a></li>
-					<li><a href="#avance" data-toggle="tab"><?php echo JText::_('COM_AC19_ADVANCED'); ?></a></li>
-					<li><a href="#commentaire" data-toggle="tab"><?php echo JText::_('COM_AC19_COMMENT'); ?></a></li>
-				</ul>
 				<div class="tab-content">
 					<div class="tab-pane active" id="message">
 						<table class="table">
@@ -77,15 +72,7 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 								</tr>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('contenu'); ?></div>
-									</td>
-									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('contenu'); ?></div>
-									</td>
-								</tr>
-								<tr>
-									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('utilisateurs_aut__id'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('utilisateurs_aut_id'); ?></div>
 									</td>
 									<td width="80%">
 										<div class="controls"><?php echo $this->form->getInput('utilisateurs_aut_id'); ?></div>
@@ -97,6 +84,14 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 									</td>
 									<td width="80%">
 										<div class="controls"><?php echo $this->form->getInput('utilisateurs_dest_id'); ?></div>
+									</td>
+								</tr>
+								<tr>
+									<td width="20%" class="nowrap right">
+										<div class="control-label"><?php echo $this->form->getLabel('contenu'); ?></div>
+									</td>
+									<td width="100%">
+										<div class="controls"><?php echo $this->form->getInput('contenu'); ?></div>
 									</td>
 								</tr>
 							</tbody>

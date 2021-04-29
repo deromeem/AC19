@@ -19,10 +19,6 @@
 			description="COM_AC19_MESSAGES_OBJET"
 			size="40" class="inputbox" default="" required="true"
 		/>
-		<field name="contenu" type="text" label="COM_AC19_MESSAGES_CONTENU"
-			description="COM_AC19_MESSAGES_CONTENU"
-			size="40" class="inputbox" default="" required="false"
-		/>
 		<field name="utilisateurs_aut_id" type="sql" label="COM_AC19_MESSAGES_AUTEUR"
             description="COM_AC19_MESSAGES_AUTEUR"
             query="SELECT id, nom FROM #__ac19_utilisateurs ORDER BY nom"
@@ -32,7 +28,14 @@
             description="COM_AC19_MESSAGES_DESTINATAIRE"
             query="SELECT id, nom FROM #__ac19_utilisateurs ORDER BY nom"
             key_field="id" value_field="nom" required="false"
-        />  
+        />
+		<field name="contenu" type="editor" label="COM_AC19_MESSAGES_CONTENU"
+			description="COM_AC19_MESSAGES_CONTENU"
+			class="inputbox" default="" required="false"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak"
+		/>
 		<field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"
