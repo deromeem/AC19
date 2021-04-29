@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 28 avr. 2021 à 20:23
+-- Généré le : jeu. 29 avr. 2021 à 15:04
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.2
 
@@ -47,7 +47,7 @@ CREATE TABLE `ac19_ac19_benevoles` (
 --
 
 INSERT INTO `ac19_ac19_benevoles` (`id`, `email`, `latitude`, `longitude`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '-', '-', '-', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, 'sjaoui@ac19.fr', '48.836764817727065', '2.292722422303131', '', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0),
 (3, 'jeanPierre.genereux@gmail.com', '59.548478487448', '87.525498494984488', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (4, 'Labbe.pierre@sfr.fr', '72.588948468496487', '-78.541894874874', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
@@ -79,7 +79,7 @@ CREATE TABLE `ac19_ac19_catalogues` (
 --
 
 INSERT INTO `ac19_ac19_catalogues` (`id`, `titre`, `description`, `dateDebut`, `dateFin`, `partenaires_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '2020-01-01 00:00:00', '2020-01-01 00:00:00', 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '-', '-', '2020-01-01 00:00:00', '2020-01-01 00:00:00', 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, 'Produits surgelés', 'La catalogue des produits surgelés', '2021-03-30 00:00:00', '2021-05-12 00:00:00', 2, '', 1, '2021-03-30 00:00:00', 0, '2021-03-30 00:00:00', 0, 0),
 (3, 'Alimentation générale', 'Les fruits et légumes, viandes et de produits à base de viande, poissons, crustacés et mollusques, pain, pâtisserie et confiserie en magasin spécialisé, boissons, détail alimentaires', '2021-01-01 00:00:00', '2021-04-30 00:00:00', 1, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (4, 'Produits de toilette', 'Brosse à dents, papier toilette...', '2021-01-01 00:00:00', '2021-04-30 00:00:00', 2, '', 1, '2021-01-01 00:00:00', 0, '2021-01-01 00:00:00', 0, 0),
@@ -136,7 +136,7 @@ CREATE TABLE `ac19_ac19_categories` (
 --
 
 INSERT INTO `ac19_ac19_categories` (`id`, `titre`, `description`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '-', '-', '-', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, 'Fruits et légumes', '', 'fruits_et_legumes', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (3, 'Boucherie', '', 'boucherie', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (4, 'Charcuterie/Traiteur', 'charcuterie_traiteur', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
@@ -217,10 +217,10 @@ CREATE TABLE `ac19_ac19_coordinateurs` (
 --
 
 INSERT INTO `ac19_ac19_coordinateurs` (`id`, `email`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '-', '-', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, 'arichaud@ac19.fr', 'arichaud', 1, '2020-11-27 16:47:15', 0, '2020-11-27 16:47:15', 0, 0),
-(3, 'pierre.rochard@hotmail.fr', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
-(4, 'Dianthéa.kalos@sfr.fr', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
+(3, 'pierre.rochard@hotmail.fr', 'rochard', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 'dianthéa.kalos@sfr.fr', 'kalos', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -317,7 +317,7 @@ CREATE TABLE `ac19_ac19_magasins` (
 --
 
 INSERT INTO `ac19_ac19_magasins` (`id`, `enseigne`, `adrRue`, `adrVille`, `adrCP`, `tel`, `latitude`, `longitude`, `type_mags_id`, `partenaires_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 'test', '19', '19', '19', '19', '19', '19', 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-12-07 16:06:45', 669, 0),
+(1, '-', '-', '-', '-', '-', '-', '-', 1, 1, '-', 0, '2020-01-01 00:00:00', 669, '2020-12-07 16:06:45', 669, 0),
 (2, 'Carrefour', ' 4 Rue des potiers', 'Malakoff', '92240', '0607080908', '75.588948468496487', '-70.541894874874', 4, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (3, 'BitConnect', '60 Rue Nananan', 'Vitry sur Seine', '94400', '0607583908', '75.588584868496487', '50.8548484894489', 2, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (4, 'Casino', '70 Rue des fleurs', 'Bagneux', '92220', '0607084008', '50.544174575487448', '82.525414194984488', 5, 4, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
@@ -349,7 +349,7 @@ CREATE TABLE `ac19_ac19_messages` (
 --
 
 INSERT INTO `ac19_ac19_messages` (`id`, `date`, `objet`, `contenu`, `utilisateurs_aut_id`, `utilisateurs_dest_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '2020-01-01 00:00:00', '-', '', 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '2020-01-01 00:00:00', '-', '-', 1, 1, '-', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, '2020-12-10 08:36:04', 'Recherche de bénévoles', 'Bonjour,\r\n\r\nnous sommes à la recherche de bénévoles pour contribuer aux actions humanitaires d\'AC19 à Paris.\r\nConnaissez-vous dans votre entourage des personnes qui pourraient être intéressées ?\r\n\r\nMerci d\'avance pour votre réponse.\r\n\r\nCordialement,\r\nAlma RICHAUD\r\nCoordinatrice AC19', 4, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (3, '2020-12-10 08:45:27', 'Recherche de bénévoles', 'Bonjour,\r\n\r\nnous sommes à la recherche de bénévoles pour contribuer aux actions humanitaires d\'AC19 à Paris.\r\nConnaissez-vous dans votre entourage des personnes qui pourraient être intéressées ?\r\n\r\nMerci d\'avance pour votre réponse.\r\n\r\nCordialement,\r\nAlma RICHAUD\r\nCoordinatrice AC19', 4, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (4, '2020-12-10 08:47:07', 'Vos voisins ont besoin de notre aide', 'Bonjour Monsieur,\r\n\r\nvoici quelques semaines déjà que notre association AC19 vous rend des services à domicile pour vos achats et livraisons de produits de première nécessité.\r\n\r\nDe nouveaux bénévoles venant d\'être recrutés dans votre quartier, nous sommes maintenant en mesure d\'étendre nos services à vos voisins qui en auraient besoin.\r\n\r\nNous serions très heureux de pouvoir aussi les aider. Merci de nous le faire savoir.\r\n\r\nCordialement,\r\nSami JAOUI,\r\nBénévole AC19 - Paris 15e', 3, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
@@ -379,10 +379,10 @@ CREATE TABLE `ac19_ac19_partenaires` (
 --
 
 INSERT INTO `ac19_ac19_partenaires` (`id`, `email`, `raisonSociale`, `numSiren`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 'mailtest@test.com', '', '5645646456', '', 0, '2020-01-01 00:00:00', 669, '2020-12-03 15:51:14', 669, 0),
-(2, 'phochon@ac19.fr', 'Carrefour', '652 014 051', '', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0),
-(3, 'nananan@gmail.com', 'BitConnect', '45454551', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
-(4, 'Satoshi.Tajiri@sfr.com', 'Casino', '75284842', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
+(1, '-', '-', '-', '-', 0, '2020-01-01 00:00:00', 669, '2020-12-03 15:51:14', 669, 0),
+(2, 'phochon@ac19.fr', 'Carrefour', '652 014 051', 'phochon', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0),
+(3, 'nananan@gmail.com', 'BitConnect', '45454551', 'nananan', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 'satoshi.tajiri@sfr.com', 'Casino', '75284842', 'tajiri', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -412,10 +412,10 @@ CREATE TABLE `ac19_ac19_particuliers` (
 --
 
 INSERT INTO `ac19_ac19_particuliers` (`id`, `email`, `adrRue`, `adrVille`, `adrCP`, `latitude`, `longitude`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '', '', '', '', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '-', '-', '-', '-', '-', '-', '-', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, 'mdupond@19.fr', '12 Rue Blomet', 'Paris', '75015', '48.843836112648695', '2.3081649080153337', 'mdupond', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0),
-(3, 'Jeff.bezoz@gmail.com', '80 rue de la Sillicon Valley', 'Paris', '75015', '75.588948468496487', '82.525498494984488', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
-(5, 'Derome.joomla@gmail.com', '321 Rue Lecourbe', 'Paris', '75015', '55.548478487448', '-76.541894874874', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
+(3, 'jeff.bezoz@gmail.com', '80 rue de la Sillicon Valley', 'Paris', '75015', '75.588948468496487', '82.525498494984488', 'bezoz', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(5, 'derome.joomla@gmail.com', '321 Rue Lecourbe', 'Paris', '75015', '55.548478487448', '-76.541894874874', 'derome', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -533,7 +533,7 @@ CREATE TABLE `ac19_ac19_type_mags` (
 --
 
 INSERT INTO `ac19_ac19_type_mags` (`id`, `typeMag`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 'Nouveau ag', 'nouvea', 1, '2020-01-01 00:00:00', 669, '2020-12-07 16:06:29', 669, 0),
+(1, '-', '-', 1, '2020-01-01 00:00:00', 669, '2020-12-07 16:06:29', 669, 0),
 (2, '1 - Petite surface', 'petite-surface', 0, '2020-01-01 00:00:00', 669, '2020-12-07 15:46:56', 669, 0),
 (3, '2 - Moyenne surface', 'moyenne_surface', 1, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (4, '3 - Grande surface', 'grande_surface', 1, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
