@@ -5,30 +5,17 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="dateHeureDebut" type="text" label="COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_DEBUT"
-            description="COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_DEBUT"
-            size="40" class="input-large-text" default="" required="true"
-        />   
-		<field name="dateHeureFin" type="text" label="COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_FIN"
-            description="COM_AC19_PRISE_EN_CHARGES_DATE_HEURE_FIN"
-            size="40" class="input-large-text" default="" required="true"
-        />
-		<field name="commandes_id" type="sql" label="COM_AC19_PRISE_EN_CHARGES_COMMANDE"
-            description="COM_AC19_PRISE_EN_CHARGES_COMMANDE"
-            query="SELECT id, numCde FROM #__ac19_commandes ORDER BY numCde"
-            key_field="id" value_field="numCde" required="false"
-        /> 
-		<field name="benevoles_id" type="sql" label="COM_AC19_PRISE_EN_CHARGES_BENEVOLE"
-            description="COM_AC19_PRISE_EN_CHARGES_BENEVOLE"
-            query="SELECT id, email FROM #__ac19_benevoles ORDER BY email"
-            key_field="id" value_field="email" required="false"
-        />      
+        <field name="etatCde" type="sql" label="COM_AC19_ETAT_CDES_ETAT_CDE"
+            description="COM_AC19_ETAT_CDES_ETAT_CDE"
+            query="SELECT id, etatCde FROM #__ac19_etat_cdes ORDER BY etatCde"
+            key_field="id" value_field="etatCde" required="false"
+        />     
 		<field name="alias" type="text"
 			label="JFIELD_ALIAS_LABEL"
 			description="JFIELD_ALIAS_DESC"
 			hint="JFIELD_ALIAS_PLACEHOLDER"
 			class="inputbox" size="45"
-		/> 
+		/>
         <field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"

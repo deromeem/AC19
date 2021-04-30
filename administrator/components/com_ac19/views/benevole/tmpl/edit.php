@@ -8,14 +8,14 @@ JHtml::_('formbehavior.chosen', 'select');
 <script type="text/javascript">
 	Joomla.submitbutton = function(task)
 	{
-		if (task == 'prise_en_charge.cancel' || document.formvalidator.isValid(document.id('ac19-form')))
+		if (task == 'benevole.cancel' || document.formvalidator.isValid(document.id('ac19-form')))
 		{
 			Joomla.submitform(task, document.getElementById('ac19-form'));
 		}
 	}
 </script>
 
-<form action="<?php echo JRoute::_('index.php?option=com_ac19&view=prise_en_charge&layout=edit&id='.(int) $this->item->id); ?>"
+<form action="<?php echo JRoute::_('index.php?option=com_ac19&view=benevole&layout=edit&id='.(int) $this->item->id); ?>"
       method="post" name="adminForm" id="ac19-form" class="form-validate">
 
 	<div class="form-inline form-inline-header">		
@@ -32,21 +32,17 @@ JHtml::_('formbehavior.chosen', 'select');
 		<div class="row-fluid ">
 			<div class="span9">
 				<div class="form-vertical">
-					<div class="control-group">
-						<div class="control-label"><?php echo $this->form->getLabel('dateHeureDebut'); ?></div>
-						<div class="controls"><?php echo $this->form->getInput('dateHeureDebut'); ?></div>
+					<div class="control-group">					
+						<div class="control-label"><?php echo $this->form->getLabel('email'); ?></div>
+						<div class="controls"><?php echo $this->form->getInput('email'); ?></div>					
 					</div>
+					<div class="control-group">					
+						<div class="control-label"><?php echo $this->form->getLabel('latitude'); ?></div>
+						<div class="controls"><?php echo $this->form->getInput('latitude'); ?></div>					
+					</div>					
 					<div class="control-group">
-						<div class="control-label"><?php echo $this->form->getLabel('dateHeureFin'); ?></div>
-						<div class="controls"><?php echo $this->form->getInput('dateHeureFin'); ?></div>
-					</div>
-					<div class="control-group">
-						<div class="control-label"><?php echo $this->form->getLabel('commandes_id'); ?></div>
-						<div class="controls"><?php echo $this->form->getInput('commandes_id'); ?></div>
-					</div>
-					<div class="control-group">
-						<div class="control-label"><?php echo $this->form->getLabel('benevoles_id'); ?></div>
-						<div class="controls"><?php echo $this->form->getInput('benevoles_id'); ?></div>
+						<div class="control-label"><?php echo $this->form->getLabel('longitude'); ?></div>
+						<div class="controls"><?php echo $this->form->getInput('longitude'); ?></div>									
 					</div>					
 				</div>
 			</div>

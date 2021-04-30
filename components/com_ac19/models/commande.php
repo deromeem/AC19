@@ -51,4 +51,45 @@ class Ac19ModelCommande extends JModelItem
 		// echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
   		return $this->_item[$pk];
 	}
+	public function getProduct($pk = null)
+	{
+		$pk = (!empty($pk)) ? $pk : (int) $this->getState($this->_context.'.id');
+		
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+		$query->select('C.numCde, LCDES.qteCde, P.description, P.prix, P.titre');
+		$query->from('#__ac19_commandes AS C JOIN #__ac19_ligne_cdes AS LCDES ON C.id = LCDES.commandes_id JOIN #__ac19_produits AS P ON P.id = LCDES.produits_id');
+		$query->where('c.id = '. (int) $pk);
+		$db->setQuery($query);
+		$data = $db->loadObject();
+		$this->_pages[$pk] = $data;
+		return $this->_pages[$pk];
+		// echo nl2br(str_replace('#__','ac19_',$query));
+	}
+	public function insertProduct($numCde)
+	{
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+		$query->insert('C.numCde, LCDES.qteCde, P.description, P.titre, P.prix');
+		$query->from('#__abdc_produits AS P JOIN ');
+		$query->where('#__abdc_episodes AS ep');
+		$db->setQuery($query);
+		$data = $db->loadObjectList();
+		$this->_pages = $data;
+		return $this->_pages;
+
+	}
+	public function deleteProduct($numCde)
+	{
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+		$query->select('qte, , titre, prix');
+		$query->from('#__abdc_episodes AS ep');
+		$query->where('#__abdc_episodes AS ep');
+		$db->setQuery($query);
+		$data = $db->loadObjectList();
+		$this->_pages = $data;
+		return $this->_pages;
+
+	}
 }

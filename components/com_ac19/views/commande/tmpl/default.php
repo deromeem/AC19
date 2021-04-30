@@ -67,5 +67,41 @@ $isAc19 = (in_array_any(array('12', '13', '14', '15'), $user->groups));
 				</tr>
 			</tbody>
 		</table>
+		<table class="table">
+			<tbody>
+				<tr>
+					<td width="20%" class="nowrap right">
+						<span class="label"><?php echo JText::_('COM_AC19_LIGNES_COMMANDE_QTE_CDE'); ?></span>
+					</td>
+					<td width="80%">
+						<h4><?php echo $this->pages->qteCde ?></h4>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" class="nowrap right">
+						<span class="label"><?php echo JText::_('COM_AC19_PRODUIT_DESCRIPTION'); ?></span>
+					</td>
+					<td width="80%">
+						<?php echo $this->pages->description ?>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" class="nowrap right">
+						<span class="label"><?php echo JText::_('COM_AC19_PRODUIT_PRIX'); ?></span>
+					</td>
+					<td width="80%">
+						<?php echo $this->pages->prix ?>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" class="nowrap right">
+						<span class="label"><?php echo JText::_('COM_AC19_PRODUIT_TITRE'); ?></span>
+					</td>
+					<td width="80%">
+						<h4><?php echo $this->pages->titre ?></h4>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 <?php endif; ?>

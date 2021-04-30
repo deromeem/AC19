@@ -17,17 +17,17 @@ if ($saveOrder)
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 		</td>
-		<td class="wrap center hidden-tablet hidden-phone has-context">
+		<td class="wrap has-context">
 			<div class="pull-left">
-				<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=benevoles'.(int) $item->id); ?>">
-					<?php echo $this->escape($item->email); ?>
+				<a href="<?php echo JRoute::_('index.php?option=com_ac19&task=benevole.edit&id='.(int) $item->id); ?>">
+					<?php echo $this->escape($item->courriel); ?>
 				</a>
 			</div>
 		</td>
-		<td class="nowrap center hidden-tablet hidden-phone">
+		<td>
 			<?php echo $item->latitude; ?>
 		</td>
-		<td class="nowrap center hidden-tablet hidden-phone">
+		<td>
 			<?php echo $item->longitude; ?>
 		</td>
 		<td class="center hidden-phone">

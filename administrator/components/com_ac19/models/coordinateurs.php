@@ -10,7 +10,7 @@ class Ac19ModelCoordinateurs extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'c.id',
-				'email', 'c.email',
+				'mail', 'c.email',
 				'published', 'c.published',
 				'hits', 'c.hits',
 				'modified', 'c.modified'
@@ -37,7 +37,7 @@ class Ac19ModelCoordinateurs extends JModelList
 		$query->from('#__ac19_coordinateurs c');
 
 		// joint la table _users de Joomla
-		$query->select('u.email AS mail')->join('LEFT', '#__ac19_utilisateurs AS u ON c.email=u.email');
+		$query->select('u.email AS mail')->join('LEFT', '#__ac19_utilisateurs AS u ON c.email=u.id');
 
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');

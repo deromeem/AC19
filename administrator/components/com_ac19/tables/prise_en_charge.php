@@ -1,11 +1,11 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class Ac19TableCatalogue extends JTable
+class Ac19TablePrise_en_charge extends JTable
 {
 	function __construct(&$db) 
 	{
-		parent::__construct('#__ac19_catalogues', 'id', $db);
+		parent::__construct('#__ac19_prise_en_charges', 'id', $db);
 	}
 
 	public function store($updateNulls = false)
@@ -29,9 +29,6 @@ class Ac19TableCatalogue extends JTable
 				$this->created_by = $user->get('id');
 			}
 		}
-
-		// contrôle d'unicité de l'alias SEF
-		$table = JTable::getInstance('Catalogue', 'Ac19Table');
 		
 		return parent::store($updateNulls);
 	}
