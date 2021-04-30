@@ -16,15 +16,31 @@ $isFolia = (in_array_any(array('12', '13', '14', '15'), $user->groups));
 <?php else : ?>
 	<div class="form-inline form-inline-header">
 		<div class="btn-group pull-left">
-			<h2><?php echo JText::_('COM_AC19_UTILISATEUR'); ?></h2>
+			<h2><?php echo JText::_('COM_AC19_MESSAGE'); ?></h2>
 		</div>
 		<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_u&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_ac19&view=form_m&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
 		</div>	
 	</div>
 	<div>
 		<table class="table">
 			<tbody>
+				<tr>
+					<td width="20%" class="nowrap right">
+						<span class="label"><?php echo JText::_('COM_AC19_MESSAGES_AUTEUR'); ?></span>
+					</td>
+					<td width="80%">
+						<h4><?php echo $this->item->nomA ?></h4>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" class="nowrap right">
+						<span class="label"><?php echo JText::_('COM_AC19_MESSAGES_DESTINATAIRE'); ?></span>
+					</td>
+					<td width="80%">
+						<?php echo $this->item->nomD ?>
+					</td>
+				</tr>
 				<tr>
 					<td width="20%" class="nowrap right">
 						<span class="label"><?php echo JText::_('COM_AC19_MESSAGES_DATE'); ?></span>
@@ -45,7 +61,7 @@ $isFolia = (in_array_any(array('12', '13', '14', '15'), $user->groups));
 					<td width="20%" class="nowrap right">
 						<span class="label"><?php echo JText::_('COM_AC19_MESSAGES_CONTENU'); ?></span>
 					</td>
-					<td width="80%">
+					<td width="100%">
 						<?php echo $this->item->contenu ?>
 					</td>
 				</tr>

@@ -50,7 +50,7 @@ $isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
 			<div class="clearfix"> </div>
 
 			<fieldset>
-				<ul class="nav nav-tabs">
+				//<ul class="nav nav-tabs">
 					<li><a href="#contact" data-toggle="tab"><?php echo JText::_('COM_ANNUAIRE_CONTACT'); ?></a></li>
 					<li><a href="#avance" data-toggle="tab"><?php echo JText::_('COM_ANNUAIRE_ADVANCED'); ?></a></li>
 					<li><a href="#commentaire" data-toggle="tab"><?php echo JText::_('COM_ANNUAIRE_COMMENT'); ?></a></li>

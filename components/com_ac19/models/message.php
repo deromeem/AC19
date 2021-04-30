@@ -29,8 +29,9 @@ class Ac19ModelMessage extends JModelItem
 				$email = $user->email;
 				$db = $this->getDbo();
 				$query = $db->getQuery(true);
-				$query->select('m.id as id, m.date, m.objet, m.contenu, m.hits, m.modified');
-				$query->from('#__ac19_messages AS m');
+				$query->select('m.id as id, ua.nom AS nomA, ud.nom AS nomD, m.date, m.objet, m.contenu, m.hits, m.modified');
+				$query->from('#__ac19_messages AS m JOIN #__ac19_utilisateurs as ua ON ua.id=m.utilisateurs_aut_id
+				JOIN #__ac19_utilisateurs as ud ON ud.id=m.utilisateurs_dest_id');
 				$query->where('u.email = ' . $email);
 				$db->setQuery($query);
 				$data = $db->loadObject();
@@ -41,14 +42,15 @@ class Ac19ModelMessage extends JModelItem
 			// Si pas de données chargées pour cet id
 			$db = $this->getDbo();
 			$query = $db->getQuery(true);
-			$query->select('m.id, m.date, m.objet, m.contenu, m.hits, m.modified');
-			$query->from('#__ac19_messages AS m');
+			$query->select('m.id, ua.nom AS nomA, ud.nom AS nomD, m.date, m.objet, m.contenu, m.hits, m.modified');
+			$query->from('#__ac19_messages AS m JOIN #__ac19_utilisateurs as ua ON ua.id=m.utilisateurs_aut_id
+			JOIN #__ac19_utilisateurs as ud ON ud.id=m.utilisateurs_dest_id');
 			$query->where('m.id = ' . (int) $pk);
 			$db->setQuery($query);
 			$data = $db->loadObject();
 			$this->_item[$pk] = $data;
 		}
-		 //echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
+		// echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
   		return $this->_item[$pk];
 	}
 }

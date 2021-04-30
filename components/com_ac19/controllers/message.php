@@ -56,7 +56,7 @@ class Ac19ControllerMessage extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."index.php/mon-profil";		
+		return JURI::base()."index.php?option=com_ac19&view=form_m&layout=edit&id=";		
 	}
 
 	public function getModel($name = 'form_m', $prefix = '', $config = array('ignore_request' => true))
