@@ -78,7 +78,8 @@ class Ac19ModelCatalogues extends JModelList
 		
 		// filtre les éléments publiés
 		$query->where('c.published=1');
-		
+		$query->where('partenaires_id=' . $this->getCurrentPartenaireId());
+	
 		// tri des colonnes
 		$orderCol = $this->getState('list.ordering', 'titre');
 		$orderDirn = $this->getState('list.direction', 'ASC');
@@ -87,4 +88,24 @@ class Ac19ModelCatalogues extends JModelList
 		// echo nl2br(str_replace('#__','ac19_',$query));			// TEST/DEBUG
 		return $query;
 	}
+
+	protected function getCurrentPartenaireId()
+	{
+		// La requête utilise l'email de partenaire connecté pour avoir son id
+		$currentUserEmail = JFactory::getUser()->email;
+		$query	= $this->_db->getQuery(true);
+		$query->select('id');
+		$query->from('#__ac19_partenaires');
+		$query->where('published=1');
+		// quote() sert à ajouter des '' à l'email afin d'éviter le conflit avec le mot clé réservé "@". voir : https://docs.joomla.org/Selecting_data_using_JDatabase 
+		$query->where('email=' . $this->_db->quote($currentUserEmail));
+		$this->_db->setQuery($query);
+		// Retourner une seule valeur de la requête 
+		// voir : https://docs.joomla.org/Selecting_data_using_JDatabase/fr
+		$partenaireId = $this->_db->loadResult();
+		// echo nl2br(str_replace('#__','ac19_',$query)); // TEST DEBUG
+		return $partenaireId;
+	}
+
+
 }
