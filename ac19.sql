@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le : ven. 30 avr. 2021 à 14:27
--- Version du serveur :  10.4.18-MariaDB
--- Version de PHP : 7.4.16
+-- Hôte : 127.0.0.1
+-- Généré le :  lun. 03 mai 2021 à 17:03
+-- Version du serveur :  10.3.15-MariaDB
+-- Version de PHP :  7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `ac19`
+-- Base de données :  `ac19`
 --
 
 -- --------------------------------------------------------
@@ -46,8 +47,10 @@ CREATE TABLE `ac19_ac19_benevoles` (
 --
 
 INSERT INTO `ac19_ac19_benevoles` (`id`, `email`, `latitude`, `longitude`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
-(2, 'sjaoui@ac19.fr', '48.836764817727065', '2.292722422303131', '', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0);
+(1, '-', '-', '-', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(2, 'sjaoui@ac19.fr', '48.836764817727065', '2.292722422303131', '', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0),
+(3, 'jeanPierre.genereux@gmail.com', '59.548478487448', '87.525498494984488', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 'Labbe.pierre@sfr.fr', '72.588948468496487', '-78.541894874874', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -76,11 +79,11 @@ CREATE TABLE `ac19_ac19_catalogues` (
 --
 
 INSERT INTO `ac19_ac19_catalogues` (`id`, `titre`, `description`, `dateDebut`, `dateFin`, `partenaires_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '2020-01-01 00:00:00', '2020-01-01 00:00:00', 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '-', '-', '2020-01-01 00:00:00', '2020-01-01 00:00:00', 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, 'Produits surgelés', 'La catalogue des produits surgelés', '2021-03-30 00:00:00', '2021-05-12 00:00:00', 2, '', 1, '2021-03-30 00:00:00', 0, '2021-03-30 00:00:00', 0, 0),
-(3, 'Alimentation générale', 'Les fruits et légumes, viandes et de produits à base de viande, poissons, crustacés et mollusques, pain, pâtisserie et confiserie en magasin spécialisé, boissons, détail alimentaires', '2021-01-01 00:00:00', '2021-04-30 00:00:00', 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(3, 'Alimentation générale', 'Les fruits et légumes, viandes et de produits à base de viande, poissons, crustacés et mollusques, pain, pâtisserie et confiserie en magasin spécialisé, boissons, détail alimentaires', '2021-01-01 00:00:00', '2021-04-30 00:00:00', 1, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (4, 'Produits de toilette', 'Brosse à dents, papier toilette...', '2021-01-01 00:00:00', '2021-04-30 00:00:00', 2, '', 1, '2021-01-01 00:00:00', 0, '2021-01-01 00:00:00', 0, 0),
-(5, 'Produits d’hygiène', 'Les produits d’hygiène', '2021-01-01 00:00:00', '2021-04-30 00:00:00', 4, '', 1, '2021-01-01 00:00:00', 0, '2021-01-01 00:00:00', 0, 0),
+(5, 'Produits d’hygiène', 'Les produits d’hygiène', '2021-01-01 00:00:00', '2021-04-30 00:00:00', 1, '', 1, '2021-01-01 00:00:00', 0, '2021-01-01 00:00:00', 0, 0),
 (6, 'Produits pharmaceutiques', 'Les produits pharmaceutiques', '2021-02-01 00:00:00', '2021-04-30 00:00:00', 2, '', 1, '2021-02-01 00:00:00', 0, '2021-02-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
@@ -133,7 +136,7 @@ CREATE TABLE `ac19_ac19_categories` (
 --
 
 INSERT INTO `ac19_ac19_categories` (`id`, `titre`, `description`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '-', '-', '-', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, 'Fruits et légumes', '', 'fruits_et_legumes', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (3, 'Boucherie', '', 'boucherie', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (4, 'Charcuterie/Traiteur', 'charcuterie_traiteur', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
@@ -185,7 +188,11 @@ CREATE TABLE `ac19_ac19_commandes` (
 --
 
 INSERT INTO `ac19_ac19_commandes` (`id`, `numCde`, `dateHeureCde`, `dateHeureLivr`, `prixTotal`, `refPaiement`, `particuliers_id`, `magasins_id`, `etat_cdes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '2020-01-01 00:00:00', '2020-01-01 00:00:00', '0.00', '', 1, 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0);
+(1, '-', '2020-01-01 00:00:00', '2020-01-01 00:00:00', '0.00', '', 1, 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(2, '2', '2020-01-01 00:00:00', '2020-01-01 00:00:00', '50.00', '4', 2, 1, 1, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(3, '3', '2020-01-01 00:00:00', '2020-01-01 00:00:00', '70.00', '', 3, 3, 1, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, '4', '2020-01-01 00:00:00', '2020-01-01 00:00:00', '30.00', '', 5, 2, 5, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(5, '5', '2020-01-01 00:00:00', '2020-01-01 00:00:00', '10.00', '', 2, 3, 7, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -210,8 +217,10 @@ CREATE TABLE `ac19_ac19_coordinateurs` (
 --
 
 INSERT INTO `ac19_ac19_coordinateurs` (`id`, `email`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
-(2, 'arichaud@ac19.fr', 'arichaud', 1, '2020-11-27 16:47:15', 0, '2020-11-27 16:47:15', 0, 0);
+(1, '-', '-', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(2, 'arichaud@ac19.fr', 'arichaud', 1, '2020-11-27 16:47:15', 0, '2020-11-27 16:47:15', 0, 0),
+(3, 'pierre.rochard@hotmail.fr', 'rochard', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 'dianthéa.kalos@sfr.fr', 'kalos', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -270,7 +279,12 @@ CREATE TABLE `ac19_ac19_ligne_cdes` (
 --
 
 INSERT INTO `ac19_ac19_ligne_cdes` (`id`, `qteCde`, `qteLivr`, `commandes_id`, `produits_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 0, 0, 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0);
+(1, 0, 0, 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(2, 4, 4, 2, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(3, 6, 5, 3, 4, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 4, 4, 4, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(5, 10, 10, 5, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(6, 15, 15, 4, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -303,7 +317,10 @@ CREATE TABLE `ac19_ac19_magasins` (
 --
 
 INSERT INTO `ac19_ac19_magasins` (`id`, `enseigne`, `adrRue`, `adrVille`, `adrCP`, `tel`, `latitude`, `longitude`, `type_mags_id`, `partenaires_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 'test', '19', '19', '19', '19', '19', '19', 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-12-07 16:06:45', 669, 0);
+(1, '-', '-', '-', '-', '-', '-', '-', 1, 1, '-', 0, '2020-01-01 00:00:00', 669, '2020-12-07 16:06:45', 669, 0),
+(2, 'Carrefour', ' 4 Rue des potiers', 'Malakoff', '92240', '0607080908', '75.588948468496487', '-70.541894874874', 4, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(3, 'BitConnect', '60 Rue Nananan', 'Vitry sur Seine', '94400', '0607583908', '75.588584868496487', '50.8548484894489', 2, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 'Casino', '70 Rue des fleurs', 'Bagneux', '92220', '0607084008', '50.544174575487448', '82.525414194984488', 5, 4, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -332,7 +349,7 @@ CREATE TABLE `ac19_ac19_messages` (
 --
 
 INSERT INTO `ac19_ac19_messages` (`id`, `date`, `objet`, `contenu`, `utilisateurs_aut_id`, `utilisateurs_dest_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '2020-01-01 00:00:00', '-', '', 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(1, '2020-01-01 00:00:00', '-', '-', 1, 1, '-', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (2, '2020-12-10 08:36:04', 'Recherche de bénévoles', 'Bonjour,\r\n\r\nnous sommes à la recherche de bénévoles pour contribuer aux actions humanitaires d\'AC19 à Paris.\r\nConnaissez-vous dans votre entourage des personnes qui pourraient être intéressées ?\r\n\r\nMerci d\'avance pour votre réponse.\r\n\r\nCordialement,\r\nAlma RICHAUD\r\nCoordinatrice AC19', 4, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (3, '2020-12-10 08:45:27', 'Recherche de bénévoles', 'Bonjour,\r\n\r\nnous sommes à la recherche de bénévoles pour contribuer aux actions humanitaires d\'AC19 à Paris.\r\nConnaissez-vous dans votre entourage des personnes qui pourraient être intéressées ?\r\n\r\nMerci d\'avance pour votre réponse.\r\n\r\nCordialement,\r\nAlma RICHAUD\r\nCoordinatrice AC19', 4, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
 (4, '2020-12-10 08:47:07', 'Vos voisins ont besoin de notre aide', 'Bonjour Monsieur,\r\n\r\nvoici quelques semaines déjà que notre association AC19 vous rend des services à domicile pour vos achats et livraisons de produits de première nécessité.\r\n\r\nDe nouveaux bénévoles venant d\'être recrutés dans votre quartier, nous sommes maintenant en mesure d\'étendre nos services à vos voisins qui en auraient besoin.\r\n\r\nNous serions très heureux de pouvoir aussi les aider. Merci de nous le faire savoir.\r\n\r\nCordialement,\r\nSami JAOUI,\r\nBénévole AC19 - Paris 15e', 3, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
@@ -362,10 +379,10 @@ CREATE TABLE `ac19_ac19_partenaires` (
 --
 
 INSERT INTO `ac19_ac19_partenaires` (`id`, `email`, `raisonSociale`, `numSiren`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 'mailtest@test.com', '', '5645646456', '', 0, '2020-01-01 00:00:00', 669, '2020-12-03 15:51:14', 669, 0),
-(2, 'phochon@ac19.fr', 'Carrefour', '652 014 051', '', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0),
-(3, 'kjean@ac19.fr', 'Auchan', '410 409 015', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
-(4, 'mjean@ac19.fr', 'Lidl', '343 262 622', '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
+(1, '-', '-', '-', '-', 0, '2020-01-01 00:00:00', 669, '2020-12-03 15:51:14', 669, 0),
+(2, 'phochon@ac19.fr', 'Carrefour', '652 014 051', 'phochon', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0),
+(3, 'nananan@gmail.com', 'BitConnect', '45454551', 'nananan', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 'satoshi.tajiri@sfr.com', 'Casino', '75284842', 'tajiri', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -395,8 +412,10 @@ CREATE TABLE `ac19_ac19_particuliers` (
 --
 
 INSERT INTO `ac19_ac19_particuliers` (`id`, `email`, `adrRue`, `adrVille`, `adrCP`, `latitude`, `longitude`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '', '', '', '', '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
-(2, 'mdupond@19.fr', '12 Rue Blomet', 'Paris', '75015', '48.843836112648695', '2.3081649080153337', 'mdupond', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0);
+(1, '-', '-', '-', '-', '-', '-', '-', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(2, 'mdupond@19.fr', '12 Rue Blomet', 'Paris', '75015', '48.843836112648695', '2.3081649080153337', 'mdupond', 1, '2020-11-27 16:47:15', 669, '2020-11-27 16:47:15', 669, 0),
+(3, 'jeff.bezoz@gmail.com', '80 rue de la Sillicon Valley', 'Paris', '75015', '75.588948468496487', '82.525498494984488', 'bezoz', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(5, 'derome.joomla@gmail.com', '321 Rue Lecourbe', 'Paris', '75015', '55.548478487448', '-76.541894874874', 'derome', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -453,7 +472,10 @@ CREATE TABLE `ac19_ac19_produits` (
 --
 
 INSERT INTO `ac19_ac19_produits` (`id`, `titre`, `description`, `codeBarre`, `prix`, `categories_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '', '0.00', 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0);
+(1, '-', '', '', '0.00', 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(2, 'Poulet', 'Du poulet KFC qui fond dans la bouche', '10212310', '50.00', 4, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(3, 'Orange', 'Orange de Guadeloupe.', '1021120', '2.00', 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 'Nutella BReady', 'Les nouvelles barres chocolaté de Nutella pour des petits déjeuner plein de saveur.', '4877489789', '5.00', 10, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -480,7 +502,13 @@ CREATE TABLE `ac19_ac19_stocks` (
 --
 
 INSERT INTO `ac19_ac19_stocks` (`id`, `qte`, `magasins_id`, `produits_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 0, 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0);
+(1, 0, 1, 1, '', 0, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
+(2, 10, 2, 4, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(3, 150, 2, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(4, 50, 2, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(5, 10, 3, 4, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(6, 2, 3, 3, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0),
+(7, 0, 3, 2, '', 1, '2020-01-01 00:00:00', 0, '2020-01-01 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -505,7 +533,7 @@ CREATE TABLE `ac19_ac19_type_mags` (
 --
 
 INSERT INTO `ac19_ac19_type_mags` (`id`, `typeMag`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 'Nouveau ag', 'nouvea', 1, '2020-01-01 00:00:00', 669, '2020-12-07 16:06:29', 669, 0),
+(1, '-', '-', 1, '2020-01-01 00:00:00', 669, '2020-12-07 16:06:29', 669, 0),
 (2, '1 - Petite surface', 'petite-surface', 0, '2020-01-01 00:00:00', 669, '2020-12-07 15:46:56', 669, 0),
 (3, '2 - Moyenne surface', 'moyenne_surface', 1, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
 (4, '3 - Grande surface', 'grande_surface', 1, '2020-01-01 00:00:00', 669, '2020-01-01 00:00:00', 669, 0),
@@ -894,7 +922,8 @@ INSERT INTO `ac19_action_logs` (`id`, `message_language_key`, `message`, `log_da
 (324, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"676\",\"userid\":\"676\",\"username\":\"mjean\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=676\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2021-04-30 12:24:18', 'com_users', 676, 676, 'COM_ACTIONLOGS_DISABLED'),
 (325, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"675\",\"username\":\"kjean\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=675\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2021-04-30 12:24:29', 'com_users', 675, 0, 'COM_ACTIONLOGS_DISABLED'),
 (326, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"675\",\"userid\":\"675\",\"username\":\"kjean\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=675\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2021-04-30 12:24:51', 'com_users', 675, 675, 'COM_ACTIONLOGS_DISABLED'),
-(327, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"675\",\"username\":\"kjean\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=675\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2021-04-30 12:25:18', 'com_users', 675, 0, 'COM_ACTIONLOGS_DISABLED');
+(327, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"675\",\"username\":\"kjean\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=675\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2021-04-30 12:25:18', 'com_users', 675, 0, 'COM_ACTIONLOGS_DISABLED'),
+(328, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"670\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=670\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2021-05-03 14:43:12', 'com_users', 670, 0, 'COM_ACTIONLOGS_DISABLED');
 
 -- --------------------------------------------------------
 
@@ -1725,7 +1754,7 @@ INSERT INTO `ac19_extensions` (`extension_id`, `package_id`, `name`, `type`, `el
 (449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{\"name\":\"plg_authentication_cookie\",\"type\":\"plugin\",\"creationDate\":\"July 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_COOKIE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"cookie\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{\"name\":\"plg_twofactorauth_yubikey\",\"type\":\"plugin\",\"creationDate\":\"September 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.0\",\"description\":\"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"yubikey\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{\"name\":\"plg_search_tags\",\"type\":\"plugin\",\"creationDate\":\"March 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_SEARCH_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tags\"}', '{\"search_limit\":\"50\",\"show_tagged_items\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1619781829}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1620052987}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_module\",\"type\":\"plugin\",\"creationDate\":\"October 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_MODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"module\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}', '{\"mode\":3,\"lastrun\":\"\",\"unique_id\":\"f720d200daf0faa703f0ecfac12f938df8c086ec\",\"interval\":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '{\"name\":\"plg_installer_packageinstaller\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"packageinstaller\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
@@ -2805,8 +2834,7 @@ CREATE TABLE `ac19_session` (
 --
 
 INSERT INTO `ac19_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-(0x3339323163643361376431303537383934313361656437356639323737323838, 0, 0, 1619785534, 'joomla|s:956:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo2O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTYxOTc4NTQ5MTtzOjQ6Imxhc3QiO2k6MTYxOTc4NTUyMTtzOjM6Im5vdyI7aToxNjE5Nzg1NTMzO31zOjU6InRva2VuIjtzOjMyOiJNYlRqald0c2NGN25iS3hPTW1YOGFzNXczeG40MWVBMyI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InVzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxvZ2luIjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImZvcm0iO086ODoic3RkQ2xhc3MiOjI6e3M6NjoicmV0dXJuIjtzOjMxOiJodHRwOi8vbG9jYWxob3N0L0FDMTkvaW5kZXgucGhwIjtzOjQ6ImRhdGEiO2E6MDp7fX19fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjY3NSI7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 675, 'kjean'),
-(0x6336633866386663323034373930633230383339633333656266393334376636, 1, 0, 1619785238, 'joomla|s:1108:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo1MDtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE2MTk3ODQ1NzU7czo0OiJsYXN0IjtpOjE2MTk3ODUyMzg7czozOiJub3ciO2k6MTYxOTc4NTIzODt9czo1OiJ0b2tlbiI7czozMjoiNnVOSjdaRGlxbEFMNDlTWWF2ZXJzZ3B0Wm1oQVpDQWkiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9czo5OiJjb21fdXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJ1c2VyIjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImRhdGEiO047czoyOiJpZCI7YTowOnt9fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiNjY5Ijt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 669, 'SLAM');
+(0x74336661697562313239383373706b726675707261626b6e6f39, 0, 0, 1620053638, 'joomla|s:1004:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo3O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTYyMDA1Mjk4NztzOjQ6Imxhc3QiO2k6MTYyMDA1MzYzNTtzOjM6Im5vdyI7aToxNjIwMDUzNjM4O31zOjU6InRva2VuIjtzOjMyOiIyYzNTQXJha3M3OEk2YkVFRFUzNThWZFJSVmdJR2xoaiI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InVzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxvZ2luIjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImZvcm0iO086ODoic3RkQ2xhc3MiOjI6e3M6NjoicmV0dXJuIjtzOjY2OiJodHRwOi8vbG9jYWxob3N0L2FjMTkvaW5kZXgucGhwP29wdGlvbj1jb21fYWMxOSZ2aWV3PWNvbW1hbmRlJmlkPTIiO3M6NDoiZGF0YSI7YTowOnt9fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiNjcwIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 670, 'mdupond');
 
 -- --------------------------------------------------------
 
@@ -2993,7 +3021,6 @@ CREATE TABLE `ac19_updates` (
 --
 
 INSERT INTO `ac19_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
-(846, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.9.26', '', 'https://update.joomla.org/core/sts/extension_sts.xml', '', ''),
 (847, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
 (848, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
 (849, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.25.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
@@ -3093,7 +3120,7 @@ CREATE TABLE `ac19_update_sites` (
 --
 
 INSERT INTO `ac19_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1619781829, ''),
+(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1620052987, ''),
 (2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1619784586, ''),
 (3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1619784587, '');
 
@@ -3183,7 +3210,7 @@ CREATE TABLE `ac19_users` (
 
 INSERT INTO `ac19_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
 (669, 'Super Utilisateur', 'SLAM', 'emmanuel.derome@gmail.com', '$2y$10$0Wc7pYueVlApIsaiBfCyl.QscclECT6NAmBGLSIyyCbD1gqSCcMCa', 0, 1, '2020-10-10 17:15:21', '2021-04-30 12:09:43', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
-(670, 'Marcel DUPOND', 'mdupond', 'mdupond@ac19.fr', '$2y$10$0L.5VOyJOvHWtcGR5o9VTe5tE1r2JiHiKtvzm6T7bhaY2UFCqg5lm', 0, 0, '2020-10-10 17:22:41', '2021-04-30 12:18:11', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(670, 'Marcel DUPOND', 'mdupond', 'mdupond@ac19.fr', '$2y$10$0L.5VOyJOvHWtcGR5o9VTe5tE1r2JiHiKtvzm6T7bhaY2UFCqg5lm', 0, 0, '2020-10-10 17:22:41', '2021-05-03 14:43:12', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
 (671, 'Julie PAULE', 'jpaule', 'jpaule@ac19.fr', '$2y$10$L7ERco0Ad4bycY.9AArj3OLE5BNdLfIeat/UsCo3FFzwY5UKRtPVO', 0, 0, '2020-11-28 16:58:24', '2021-03-18 15:08:06', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
 (672, 'Alma RICHAUD', 'arichaud', 'arichaud@ac19.fr', '$2y$10$vSgTttgdZFHQRBX9aKNYtuuWo.wVSYslqNotKTc9EBx.uaTZD8a46', 0, 0, '2020-11-28 17:09:04', '2021-04-27 15:14:01', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
 (673, 'Sami JAOUI', 'sjaoui', 'sjaoui@ac19.fr', '$2y$10$SFDUrsE.hqkZstvIVSeVhuRe.6cKs7p5/0GuI.vkRWfDghzLR1NvC', 0, 0, '2020-11-28 17:11:24', '2021-04-27 15:13:50', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
@@ -3360,7 +3387,7 @@ CREATE TABLE `ac19_vue_mes_messages_recus` (
 --
 DROP TABLE IF EXISTS `ac19_vue_mes_messages_emis`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `ac19_vue_mes_messages_emis`  AS SELECT `message`.`id` AS `id`, `message`.`date` AS `date`, concat(`author`.`nom`,' ',`author`.`prenom`) AS `auteur`, concat(`destinataire`.`nom`,' ',`destinataire`.`prenom`) AS `destinataire`, `message`.`objet` AS `objet`, `message`.`contenu` AS `contenu`, `author`.`email` AS `email` FROM ((`ac19_ac19_messages` `message` join `ac19_ac19_utilisateurs` `author` on(`message`.`utilisateurs_aut_id` = `author`.`id`)) join `ac19_ac19_utilisateurs` `destinataire` on(`message`.`utilisateurs_dest_id` = `destinataire`.`id`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `ac19_vue_mes_messages_emis`  AS  select `message`.`id` AS `id`,`message`.`date` AS `date`,concat(`author`.`nom`,' ',`author`.`prenom`) AS `auteur`,concat(`destinataire`.`nom`,' ',`destinataire`.`prenom`) AS `destinataire`,`message`.`objet` AS `objet`,`message`.`contenu` AS `contenu`,`author`.`email` AS `email` from ((`ac19_ac19_messages` `message` join `ac19_ac19_utilisateurs` `author` on(`message`.`utilisateurs_aut_id` = `author`.`id`)) join `ac19_ac19_utilisateurs` `destinataire` on(`message`.`utilisateurs_dest_id` = `destinataire`.`id`)) ;
 
 -- --------------------------------------------------------
 
@@ -3369,7 +3396,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `ac19_vue_mes_messages_recus`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `ac19_vue_mes_messages_recus`  AS SELECT `message`.`id` AS `id`, `message`.`date` AS `date`, concat(`author`.`nom`,' ',`author`.`prenom`) AS `auteur`, concat(`destinataire`.`nom`,' ',`destinataire`.`prenom`) AS `destinataire`, `message`.`objet` AS `objet`, `message`.`contenu` AS `contenu`, `destinataire`.`email` AS `email` FROM ((`ac19_ac19_messages` `message` join `ac19_ac19_utilisateurs` `author` on(`message`.`utilisateurs_aut_id` = `author`.`id`)) join `ac19_ac19_utilisateurs` `destinataire` on(`message`.`utilisateurs_dest_id` = `destinataire`.`id`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `ac19_vue_mes_messages_recus`  AS  select `message`.`id` AS `id`,`message`.`date` AS `date`,concat(`author`.`nom`,' ',`author`.`prenom`) AS `auteur`,concat(`destinataire`.`nom`,' ',`destinataire`.`prenom`) AS `destinataire`,`message`.`objet` AS `objet`,`message`.`contenu` AS `contenu`,`destinataire`.`email` AS `email` from ((`ac19_ac19_messages` `message` join `ac19_ac19_utilisateurs` `author` on(`message`.`utilisateurs_aut_id` = `author`.`id`)) join `ac19_ac19_utilisateurs` `destinataire` on(`message`.`utilisateurs_dest_id` = `destinataire`.`id`)) ;
 
 --
 -- Index pour les tables déchargées
@@ -4177,7 +4204,7 @@ ALTER TABLE `ac19_viewlevels`
 -- AUTO_INCREMENT pour la table `ac19_ac19_benevoles`
 --
 ALTER TABLE `ac19_ac19_benevoles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_ac19_catalogues`
@@ -4201,13 +4228,13 @@ ALTER TABLE `ac19_ac19_categories`
 -- AUTO_INCREMENT pour la table `ac19_ac19_commandes`
 --
 ALTER TABLE `ac19_ac19_commandes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_ac19_coordinateurs`
 --
 ALTER TABLE `ac19_ac19_coordinateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_ac19_etat_cdes`
@@ -4219,13 +4246,13 @@ ALTER TABLE `ac19_ac19_etat_cdes`
 -- AUTO_INCREMENT pour la table `ac19_ac19_ligne_cdes`
 --
 ALTER TABLE `ac19_ac19_ligne_cdes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_ac19_magasins`
 --
 ALTER TABLE `ac19_ac19_magasins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_ac19_messages`
@@ -4243,7 +4270,7 @@ ALTER TABLE `ac19_ac19_partenaires`
 -- AUTO_INCREMENT pour la table `ac19_ac19_particuliers`
 --
 ALTER TABLE `ac19_ac19_particuliers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_ac19_prise_en_charges`
@@ -4255,13 +4282,13 @@ ALTER TABLE `ac19_ac19_prise_en_charges`
 -- AUTO_INCREMENT pour la table `ac19_ac19_produits`
 --
 ALTER TABLE `ac19_ac19_produits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_ac19_stocks`
 --
 ALTER TABLE `ac19_ac19_stocks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_ac19_type_mags`
@@ -4279,7 +4306,7 @@ ALTER TABLE `ac19_ac19_utilisateurs`
 -- AUTO_INCREMENT pour la table `ac19_action_logs`
 --
 ALTER TABLE `ac19_action_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=328;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=329;
 
 --
 -- AUTO_INCREMENT pour la table `ac19_action_logs_extensions`
