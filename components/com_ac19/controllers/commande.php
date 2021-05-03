@@ -56,7 +56,7 @@ class Ac19ControllerCommande extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."index.php/mon-profil";		
+		return JURI::base()."index.php?option=com_ac19&view=commandes";		
 	}
 
 	public function getModel($name = 'form_c', $prefix = '', $config = array('ignore_request' => true))
