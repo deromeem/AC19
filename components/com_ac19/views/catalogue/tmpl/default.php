@@ -46,7 +46,7 @@ $isAc19Partenaire= (in_array('12', $user->groups));
 				</tr>
 				<tr>
 					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_AC19_PARTENAIRES_ID'); ?></span>
+						<span class="label"><?php echo JText::_('COM_AC19_PARTENAIRE'); ?></span>
 					</td>
 					<td width="80%">
 						<?php echo $this->item->partenaires_id ?>
